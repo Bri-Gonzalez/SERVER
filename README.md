@@ -1,4 +1,4 @@
-# Server <!-- omit in toc -->
+# SERVR <!-- omit in toc -->
 
 - [Overview](#overview)
 - [MVP](#mvp)
@@ -17,13 +17,13 @@
 
 ## Overview
 
-_**Server** is a collection of forums where gamers can converse, share, and collaborate together through different video game related servers._
+_**SERVR** is a collection of forums where gamers can converse, share, and collaborate together through different video game related servers._
 
 <br>
 
 ## MVP
 
-_The **Server** MVP will allow a user to explore a variety of different video game servers. Once a user signs up and logs in, they will be allowed to create new servers, add posts, and leave comments._
+_The **SERVR** MVP will allow a user to explore a variety of different video game servers. Once a user signs up and logs in, they will be allowed to create new servers, add posts, and leave comments._
 
 <br>
 
