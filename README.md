@@ -170,7 +170,7 @@ src
 
 #### ERD Model
 
-![ERD](https://res.cloudinary.com/dfryxohde/image/upload/v1635822726/Server/Server.drawio_ljplw5.png)
+![ERD](https://res.cloudinary.com/dfryxohde/image/upload/v1635868403/Server/Server.drawio_rri5w1.png)
 <br>
 
 ***
