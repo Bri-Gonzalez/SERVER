@@ -1,5 +1,20 @@
 # Server <!-- omit in toc -->
 
+- [Overview](#overview)
+- [MVP](#mvp)
+  - [Goals](#goals)
+  - [Libraries and Dependencies](#libraries-and-dependencies)
+  - [Client (Front End)](#client-front-end)
+    - [Wireframes](#wireframes)
+    - [Component Tree](#component-tree)
+    - [Component Architecture](#component-architecture)
+    - [Time Estimates](#time-estimates)
+  - [Server (Back End)](#server-back-end)
+    - [ERD Model](#erd-model)
+- [Post-MVP](#post-mvp)
+- [Code Showcase](#code-showcase)
+- [Code Issues & Resolutions](#code-issues--resolutions)
+
 ## Overview
 
 _**Server** is a collection of forums where gamers can converse, share, and collaborate together through different video game related servers._
