@@ -122,6 +122,7 @@ src
             |__ Server.css
 |__ services/
       |__ api-config.js
+      |__ auth.js
       |__ comments.js
       |__ posts.js
       |__ servers.js
