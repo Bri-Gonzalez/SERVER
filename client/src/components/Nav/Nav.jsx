@@ -5,7 +5,7 @@ function Nav(props) {
 
   return (
     <div className='nav'>
-      <h1>SERVER</h1>
+      <NavLink to='/'><h1>SERVER</h1></NavLink>
       {props.currentUser ? (
         <div className='user-links'>
           <p>Hello, {props.currentUser.username}</p>

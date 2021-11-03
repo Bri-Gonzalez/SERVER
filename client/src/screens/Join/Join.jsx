@@ -22,7 +22,7 @@ function Join(props) {
 
   return (
     <div className="join-container">
-      <p>Create An Account</p>
+      <p className='join-title'>Create An Account</p>
       <form
         onSubmit={(e) => {
           e.preventDefault()
@@ -76,7 +76,7 @@ function Join(props) {
         </label>
         <button>Join</button>
       </form>
-      <p>Already apart of Server? <Link to='/login'>LOG IN</Link></p>
+      <p className='already-joined'>Already apart of SERVR? <Link to='/login'>LOG IN</Link></p>
     </div>
   )
 }

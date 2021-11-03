@@ -1,3 +1,8 @@
+.join-title {
+  color: #7BFDF8;
+  font-size: 20px;
+}
+
 .join-container form {
   display: flex;
   flex-direction: column;
@@ -7,6 +12,7 @@
 }
 
 .join-container input {
+  background-color: transparent;
   border-left-style: hidden;
   border-right-style: hidden;
   border-top-style: hidden;
@@ -17,10 +23,31 @@
 }
 
 .join-container input:focus {
-  outline: 2px solid #F3BAFE;
+  background-color: #232e3e;
   border-radius: 2px;
+  outline: 2px solid #2A374A;
 }
 
 .join-container label {
+  color: #7BFDF8;
   font-size: 15px;
+}
+
+.join-container button {
+  background-color: transparent;
+  border: 2px solid #7BFDF8;
+  border-radius: 5px;
+  color: #7BFDF8;
+  font-size: 15px;
+  padding: 5px;
+  width: 50vw;
+}
+
+.already-joined, .already-joined a {
+  color: #7BFDF8;
+}
+
+.already-joined a {
+  font-weight: bold;
+  text-decoration: none;
 }

@@ -20,7 +20,7 @@ function Login(props) {
 
   return (
     <div className='login-container'>
-      <p>Welcome Back!</p>
+      <p className='login-title'>Welcome Back!</p>
       <form
         onSubmit={(e) => {
           e.preventDefault()
@@ -52,7 +52,7 @@ function Login(props) {
         </label>
         <button>Login</button>
       </form>
-      <p>New to Server? <Link to='/join'>JOIN NOW</Link></p>
+      <p className='new-to-link'>New to Server? <Link to='/join'>JOIN NOW</Link></p>
     </div>
   )
 }

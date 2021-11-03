@@ -1,3 +1,8 @@
+.login-title {
+  color: #7BFDF8;
+  font-size: 20px;
+}
+
 .login-container form {
   display: flex;
   flex-direction: column;
@@ -7,6 +12,7 @@
 }
 
 .login-container input {
+  background-color: transparent;
   border-left-style: hidden;
   border-right-style: hidden;
   border-top-style: hidden;
@@ -15,6 +21,32 @@
   width: 50vw;
 }
 
+.login-container input:focus {
+  background-color: #232e3e;
+  border-radius: 2px;
+  outline: 2px solid #2A374A;
+}
+
 .login-container label {
+  color: #7BFDF8;
   font-size: 15px;
+}
+
+.login-container button {
+  background-color: transparent;
+  border: 2px solid #7BFDF8;
+  border-radius: 5px;
+  color: #7BFDF8;
+  font-size: 15px;
+  padding: 5px;
+  width: 50vw;
+}
+
+.new-to-link, .new-to-link a {
+  color: #7BFDF8;
+}
+
+.new-to-link a {
+  font-weight: bold;
+  text-decoration: none;
 }
