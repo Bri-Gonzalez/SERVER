@@ -19,7 +19,7 @@ function Login(props) {
   }
 
   return (
-    <div>
+    <div className='login-container'>
       <p>Welcome Back!</p>
       <form
         onSubmit={(e) => {
@@ -36,6 +36,7 @@ function Login(props) {
             value={username}
             onChange={handleChange}
           />
+          <br />
           Username
         </label>
         <label>
@@ -46,11 +47,12 @@ function Login(props) {
             value={password}
             onChange={handleChange}
           />
+          <br />
           Password
         </label>
         <button>Login</button>
       </form>
-      <p>New to SERVR? <Link to='/join'>JOIN NOW</Link></p>
+      <p>New to Server? <Link to='/join'>JOIN NOW</Link></p>
     </div>
   )
 }

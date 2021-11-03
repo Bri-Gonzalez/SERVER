@@ -6,7 +6,7 @@ function Nav(props) {
   return (
     <div>
       <div>
-      <h1>SERVR</h1>
+      <h1>SERVER</h1>
       </div>
       {props.currentUser ? (
         <div>
@@ -18,7 +18,7 @@ function Nav(props) {
           <div>
             <p>Search</p>
             <NavLink to='/join'>Join</NavLink>
-            <p>Login</p>
+            <NavLink to='/login'>Login</NavLink>
           </div>
       )}
     </div>

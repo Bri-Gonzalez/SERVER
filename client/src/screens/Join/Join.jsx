@@ -9,7 +9,7 @@ function Join(props) {
     password: '',
     passwordConfirmation: ''
   })
-  
+
   const {username, email, password, passwordConfirmation} = formData
 
   const handleChange = (e) => {
@@ -21,7 +21,7 @@ function Join(props) {
   }
 
   return (
-    <div>
+    <div className="join-container">
       <p>Create An Account</p>
       <form
         onSubmit={(e) => {
@@ -38,6 +38,7 @@ function Join(props) {
             value={email}
             onChange={handleChange}
           />
+          <br />
           Email
         </label>
         <label>
@@ -48,6 +49,7 @@ function Join(props) {
             value={username}
             onChange={handleChange}
           />
+          <br />
           Username
         </label>
         <label>
@@ -58,6 +60,7 @@ function Join(props) {
             value={password}
             onChange={handleChange}
           />
+          <br />
           Password
         </label>
         <label>
@@ -68,11 +71,12 @@ function Join(props) {
             value={passwordConfirmation}
             onChange={handleChange}
           />
+          <br />
           Confirm Password
         </label>
         <button>Join</button>
       </form>
-      <p>Already apart of SERVR? <Link to='/login'>LOG IN</Link></p>
+      <p>Already apart of Server? <Link to='/login'>LOG IN</Link></p>
     </div>
   )
 }
