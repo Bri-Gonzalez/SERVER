@@ -7,6 +7,7 @@ import { getAllServers, getOneServer, postServer, putServer, deleteServer, addPo
 import { getAllPosts, getOnePost, postPost, putPost, deletePost, addCommentToPost } from '../../services/posts'
 import { getAllComments, getOneComment, postComment, putComment, deleteComment } from '../../services/comments'
 import Home from '../../screens/Home/Home'
+import Search from '../../screens/Search/Search'
 
 
 function MainContainer() {
@@ -54,6 +55,12 @@ function MainContainer() {
           ))}
         </Carousel>
       </div>
+      <Switch>
+        <Route path='/search'>
+          {/* <Search servers={servers} /> */}
+          <h1>hi</h1>
+        </Route>
+      </Switch>
     </div>
   )
 }
