@@ -88,8 +88,8 @@ src
             |__ MainContainer.jsx
 |__ screens/
       |__ Comments/
-            |__ Comment.jsx
-            |__ Comment.css
+            |__ Comments.jsx
+            |__ Comments.css
       |__ CreatePost/
             |__ CreatePost.jsx
             |__ CreatePost.css
