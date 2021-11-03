@@ -63,8 +63,8 @@ function Join(props) {
           <input
             required
             type='password'
-            name='password'
-            value={password}
+            name='passwordConfirmation'
+            value={passwordConfirmation}
             onChange={handleChange}
           />
           Confirm Password
