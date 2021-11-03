@@ -1,7 +1,7 @@
 import './Home.css'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import Carousel from 'react-material-ui-carousel'
+import Carousel from 'react-material-ui-carousel'   
 import { getAllPosts } from '../../services/posts'
 
 
@@ -27,23 +27,25 @@ function Home() {
           </Link>
         </div>
       </div>
-      <div>
-        <Carousel
-          navButtonsProps={{
-            style: {
-              backgroundColor: 'transparent',
-              border: '2px solid #7BFDF8',
-              color: '#7BFDF8'
-            }
-        }}>
-          {posts.map((post) => (
-            <div key={post.id}>
-              <Link to={`/posts/${post.id}`}>
-                <p>{post.title}</p>
-              </Link>
-            </div>
-          ))}
-        </Carousel>
+      <div className='carousel-container'>
+        <div className='carousel'>
+          <Carousel
+            navButtonsProps={{
+              style: {
+                backgroundColor: 'transparent',
+                border: '2px solid #7BFDF8',
+                color: '#7BFDF8'
+              }
+            }}>
+            {posts.map((post) => (
+              <div key={post.id}>
+                <Link to={`/posts/${post.id}`}>
+                  <p>{post.title}</p>
+                </Link>
+              </div>
+            ))}
+          </Carousel>
+        </div>
       </div>
     </div>
   )

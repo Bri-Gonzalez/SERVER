@@ -10,7 +10,6 @@ import MainContainer from './containers/MainContainer/MainContainer'
 
 import {loginUser, registerUser, removeToken, verifyUser} from './services/auth'
 import Home from './screens/Home/Home'
-// import Search from './screens/Search/Search'
 
 
 function App() {
@@ -52,13 +51,13 @@ function App() {
         </Route>
         <Route path='/login'>
           <Login handleLogin={handleLogin}/>
-          </Route>
-          <Route path='/server'>
-            <MainContainer />
-            </Route>
-          <Route path='/'>
-            <Home />
-          </Route>
+        </Route>
+        <Route path='/server'>
+          <MainContainer />
+        </Route>
+        <Route path='/'>
+          <Home />
+        </Route>
       </Switch>
       </Layout>
     </div>
