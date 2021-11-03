@@ -1,0 +1,7 @@
+.call-to-action img {
+  width: 100vw;
+  padding: 0;
+  display: block;
+  max-height: 890px;
+  object-fit: cover;
+}

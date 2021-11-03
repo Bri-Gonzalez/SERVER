@@ -1,5 +1,5 @@
 import Nav from '../../components/Nav/Nav'
-// import Footer from '../../components/Footer/Footer'
+import Footer from '../../components/Footer/Footer'
 import './Layout.css'
 
 function Layout(props) {
@@ -9,7 +9,7 @@ function Layout(props) {
       <div>
         {props.children}
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   )
 }

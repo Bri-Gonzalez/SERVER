@@ -6,10 +6,9 @@ import { Switch, Route, useHistory } from 'react-router-dom'
 import Layout from './layouts/Layout/Layout'
 import Join from './screens/Join/Join'
 import Login from './screens/Login/Login'
-import Footer from './components/Footer/Footer'
+import MainContainer from './containers/MainContainer/MainContainer'
 
 import {loginUser, registerUser, removeToken, verifyUser} from './services/auth'
-
 
 
 function App() {
@@ -44,7 +43,7 @@ function App() {
 
   return (
     <div className="App">
-      <Layout currentUser={currentUser} handleLogout={handleLogout} />
+      <Layout currentUser={currentUser} handleLogout={handleLogout}>
       <Switch>
         <Route path='/join'>
           <Join handleJoin={handleJoin}/>
@@ -52,8 +51,11 @@ function App() {
         <Route path='/login'>
           <Login handleLogin={handleLogin}/>
         </Route>
+        <Route path='/'>
+          <MainContainer />
+        </Route>
       </Switch>
-      <Footer />
+      </Layout>
     </div>
   )
 }
