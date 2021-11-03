@@ -5,3 +5,16 @@
   align-items: center;
   text-align: left;
 }
+
+.login-container input {
+  border-left-style: hidden;
+  border-right-style: hidden;
+  border-top-style: hidden;
+  border-bottom: 2px solid #7BFDF8;
+  margin: 20px 0 5px 0;
+  width: 50vw;
+}
+
+.login-container label {
+  font-size: 15px;
+}

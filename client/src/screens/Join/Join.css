@@ -5,3 +5,22 @@
   align-items: center;
   text-align: left;
 }
+
+.join-container input {
+  border-left-style: hidden;
+  border-right-style: hidden;
+  border-top-style: hidden;
+  border-bottom: 2px solid #7BFDF8;
+  color: #7BFDF8;
+  margin: 20px 0 5px 0;
+  width: 50vw;
+}
+
+.join-container input:focus {
+  outline: 2px solid #F3BAFE;
+  border-radius: 2px;
+}
+
+.join-container label {
+  font-size: 15px;
+}
