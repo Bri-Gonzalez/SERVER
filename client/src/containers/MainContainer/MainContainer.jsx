@@ -1,6 +1,7 @@
 import './MainContainer.css'
 import { useState, useEffect } from 'react'
 import { Switch, Route, useHistory, Link } from 'react-router-dom'
+import Carousel from 'react-material-ui-carousel'
 
 import { getAllServers, getOneServer, postServer, putServer, deleteServer, addPostToServer } from '../../services/servers'
 import { getAllPosts, getOnePost, postPost, putPost, deletePost, addCommentToPost } from '../../services/posts'
@@ -43,13 +44,15 @@ function MainContainer() {
         </div>
       </div>
       <div>
-        {posts.map((post) => (
-          <div key={post.id}>
-            <Link to={`/posts/${post.id}`}>
-              <p>{post.title}</p>
-            </Link>
-          </div>
-        ))}
+        <Carousel>
+          {posts.map((post) => (
+            <div key={post.id}>
+              <Link to={`/posts/${post.id}`}>
+                <p>{post.title}</p>
+              </Link>
+            </div>
+          ))}
+        </Carousel>
       </div>
     </div>
   )
