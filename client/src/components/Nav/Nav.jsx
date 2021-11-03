@@ -4,19 +4,17 @@ import { NavLink } from 'react-router-dom'
 function Nav(props) {
 
   return (
-    <div>
-      <div>
+    <div className='nav'>
       <h1>SERVER</h1>
-      </div>
       {props.currentUser ? (
-        <div>
+        <div className='user-links'>
           <p>Hello, {props.currentUser.username}</p>
-          <p>Search</p>
+          <NavLink to='/search'>Search</NavLink>
           <button onClick={props.handleLogout}>Logout</button>
         </div>
       ) : (
-          <div>
-            <p>Search</p>
+          <div className='non-user-links'>
+            <NavLink to='/search'>Search</NavLink>
             <NavLink to='/join'>Join</NavLink>
             <NavLink to='/login'>Login</NavLink>
           </div>
