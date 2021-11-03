@@ -5,6 +5,8 @@ import { Switch, Route, useHistory } from 'react-router-dom'
 
 import Layout from './layouts/Layout/Layout'
 import Join from './screens/Join/Join'
+import Login from './screens/Login/Login'
+import Footer from './components/Footer/Footer'
 
 import {loginUser, registerUser, removeToken, verifyUser} from './services/auth'
 
@@ -47,7 +49,11 @@ function App() {
         <Route path='/join'>
           <Join handleJoin={handleJoin}/>
         </Route>
+        <Route path='/login'>
+          <Login handleLogin={handleLogin}/>
+        </Route>
       </Switch>
+      <Footer />
     </div>
   )
 }

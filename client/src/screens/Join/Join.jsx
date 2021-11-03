@@ -1,6 +1,6 @@
 import './Join.css'
-import {useState} from 'react'
-import Layout from '../../layouts/Layout/Layout'
+import { useState } from 'react'
+import {Link} from 'react-router-dom'
 
 function Join(props) {
   const [formData, setFormData] = useState({
@@ -9,6 +9,7 @@ function Join(props) {
     password: '',
     passwordConfirmation: ''
   })
+  
   const {username, email, password, passwordConfirmation} = formData
 
   const handleChange = (e) => {
@@ -20,7 +21,7 @@ function Join(props) {
   }
 
   return (
-    <Layout>
+    <div>
       <p>Create An Account</p>
       <form
         onSubmit={(e) => {
@@ -71,7 +72,8 @@ function Join(props) {
         </label>
         <button>Join</button>
       </form>
-    </Layout>
+      <p>Already apart of SERVR? <Link to='/login'>LOG IN</Link></p>
+    </div>
   )
 }
 
