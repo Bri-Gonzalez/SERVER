@@ -9,12 +9,12 @@ function Nav(props) {
       {props.currentUser ? (
         <div className='user-links'>
           <p>Hello, {props.currentUser.username}</p>
-          <NavLink to='/search'>Search</NavLink>
+          <NavLink to='/server/search'>Search</NavLink>
           <button onClick={props.handleLogout}>Logout</button>
         </div>
       ) : (
           <div className='non-user-links'>
-            <NavLink to='/search'>Search</NavLink>
+            <NavLink to='/server/search'>Search</NavLink>
             <NavLink to='/join'>Join</NavLink>
             <NavLink to='/login'>Login</NavLink>
           </div>

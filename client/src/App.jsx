@@ -9,6 +9,7 @@ import Login from './screens/Login/Login'
 import MainContainer from './containers/MainContainer/MainContainer'
 
 import {loginUser, registerUser, removeToken, verifyUser} from './services/auth'
+import Home from './screens/Home/Home'
 // import Search from './screens/Search/Search'
 
 
@@ -45,16 +46,19 @@ function App() {
   return (
     <div className="App">
       <Layout currentUser={currentUser} handleLogout={handleLogout}>
-      <Route exact path='/'>
-        <MainContainer />
-      </Route>
       <Switch>
         <Route path='/join'>
           <Join handleJoin={handleJoin}/>
         </Route>
         <Route path='/login'>
           <Login handleLogin={handleLogin}/>
-        </Route>
+          </Route>
+          <Route path='/server'>
+            <MainContainer />
+            </Route>
+          <Route path='/'>
+            <Home />
+          </Route>
       </Switch>
       </Layout>
     </div>

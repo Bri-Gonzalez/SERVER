@@ -1,4 +1,3 @@
-import './MainContainer.css'
 import { useState, useEffect } from 'react'
 import { Switch, Route, useHistory, Link } from 'react-router-dom'
 import Carousel from 'react-material-ui-carousel'
@@ -35,30 +34,9 @@ function MainContainer() {
 
   return (
     <div>
-      <div className='call-to-action'>
-        <img src='https://res.cloudinary.com/dfryxohde/image/upload/v1635958718/Server/javier-martinez-hUD0PUczwJQ-unsplash_2_vxdtuw.jpg' alt='xbox controller' />
-        <div>
-          <p>A place where gamers hang out, collaborate, show creations, and share accomplishments.</p>
-          <Link to='/search'>
-            <button>FIND YOUR SERVR</button>
-          </Link>
-        </div>
-      </div>
-      <div>
-        <Carousel>
-          {posts.map((post) => (
-            <div key={post.id}>
-              <Link to={`/posts/${post.id}`}>
-                <p>{post.title}</p>
-              </Link>
-            </div>
-          ))}
-        </Carousel>
-      </div>
       <Switch>
-        <Route path='/search'>
-          {/* <Search servers={servers} /> */}
-          <h1>hi</h1>
+        <Route path='/server/search'>
+          <Search servers={servers} />
         </Route>
       </Switch>
     </div>
