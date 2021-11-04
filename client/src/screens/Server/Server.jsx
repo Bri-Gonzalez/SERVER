@@ -35,9 +35,11 @@ function Server(props) {
     <div>
       <div>
         <p>{server.name}</p>
-        <Link to={`/server/${server.id}/edit`}>
-          <EditIcon />
-        </Link>
+        {props.currentUser?.id === server.user_id && (
+          <Link to={`/server/${server.id}/edit`}>
+            <EditIcon />
+          </Link>
+        )}
       </div>
       {props.currentUser ? <Link to='/create-post'><button>+ Create Post</button></Link> : <Link to='/login'><button>+ Create Post</button></Link>}
       <div>
