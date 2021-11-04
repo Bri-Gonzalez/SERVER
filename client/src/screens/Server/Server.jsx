@@ -30,6 +30,9 @@ function Server() {
   return (
     <div>
       <p>{server.name}</p>
+      <Link to='/create-post'>
+        <button>+ Create Post</button>
+      </Link>
       <div>
         {posts.map((post) => (
           <div key={post.id}>

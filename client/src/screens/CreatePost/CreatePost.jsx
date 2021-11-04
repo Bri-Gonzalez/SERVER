@@ -1,0 +1,80 @@
+import './CreatePost.css'
+import { useState } from 'react'
+import { Redirect, useHistory } from 'react-router-dom'
+import { postPost } from '../../services/posts'
+
+
+function CreatePost() {
+  const [isCreated, setCreated] = useState(false)
+  const [formData, setFormData] = useState({
+    title: '',
+    text: '',
+    image: '',
+  })
+  const history = useHistory()
+  const { title, text, image } = formData
+
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }))
+  }
+
+  const handleCreatePost = async (id, formData) => {
+    const postData = await postPost(formData)
+    setCreated(prevState =>
+      prevState.map(post => (
+        post.id === Number(id) ? postData : post
+      )))
+    history.push('/server/search')
+  }
+
+  // if (isCreated) {
+  //   return <Redirect to={`/server/search`} />
+  // }
+
+  return (
+    <div>
+      <p>Create a Post</p>
+      <form onSubmit={(e) => {
+        e.preventDefault()
+        handleCreatePost(formData)
+      }}>
+        <label>
+          <input
+            autoFocus
+            required
+            type='text'
+            name='title'
+            value={title}
+            onChange={handleChange}
+          />
+          <br />
+          Title
+        </label>
+        <textarea
+          type='text'
+          name='text'
+          value={text}
+          placeholder='Text (optional)'
+          onChange={handleChange}
+        />
+        <label>
+          <input
+            type='text'
+            name='image'
+            value={image}
+            onChange={handleChange}
+          />
+          <br />
+          Image URL
+        </label>
+        <button>Post</button>
+      </form>
+    </div>
+  )
+}
+
+export default CreatePost

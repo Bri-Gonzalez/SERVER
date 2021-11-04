@@ -41,7 +41,7 @@ function Search() {
         />
       </form>
       <div>
-        <p>Your SERVR not exist? Create one <Link to='server/create-server'>HERE</Link></p>
+        <p>Your SERVR not exist? Create one <Link to='/server/create'>HERE</Link></p>
       </div>
       <div>
         {searchResult.map((server) => (

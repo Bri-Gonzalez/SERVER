@@ -1,14 +1,20 @@
 import './Comments.css'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router'
+import { useHistory } from 'react-router-dom'
 import {getOnePost} from '../../services/posts'
-import { getAllComments } from '../../services/comments'
+import { getAllComments, postComment } from '../../services/comments'
 
 
 function Comments() {
   const [post, setPost] = useState([])
   const [comments, setComments] = useState([])
+  const [formData, setFormData] = useState({
+    text: ''
+  })
+  const [isCreated, setCreated] = useState(false)
   const { id } = useParams()
+  const history = useHistory()
 
   useEffect(() => {
     const fetchPost = async () => {
@@ -27,6 +33,24 @@ function Comments() {
     fetchComments()
   }, [])
 
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setFormData({
+      ...formData,
+      [name]: value,
+    })
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    const created = await postComment(formData)
+    setCreated({created})
+  }
+
+  // if (isCreated) {
+  //   history.push('/server/:id/posts/:id')
+  // }
+
   return (
     <div>
       <div>
@@ -36,12 +60,13 @@ function Comments() {
         {post.text ? <p>{post.text}</p> : ''}
       </div>
       <div>
-        <form>
+        <form onSubmit={handleSubmit}>
           <textarea
             placeholder='Add a comment'
             name='comment'
             required
             autoFocus
+            onChange={handleChange}
           />
           <br/ >
           <button>+ add comment</button>
