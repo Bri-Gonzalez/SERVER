@@ -7,7 +7,7 @@ import EditIcon from '@mui/icons-material/Edit'
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline'
 
 import { getOneServer } from '../../services/servers'
-import { getAllPosts } from '../../services/posts'
+import { getAllPosts, deletePost } from '../../services/posts'
 
 
 function Server(props) {
@@ -31,6 +31,11 @@ function Server(props) {
     }
     fetchPosts()
   }, [])
+
+  const handleDeletePost = async (id) => {
+    await deletePost(id)
+    setPosts((prevState) => prevState.filter((post) => post.id !== id))
+  }
 
   return (
     <div>
@@ -57,7 +62,7 @@ function Server(props) {
               {props.currentUser?.id === post.user_id && (
                 <>
                   <Link to={`/server/${server.id}/post/${post.id}/edit`}><EditIcon /></Link>
-                  <DeleteOutlineIcon />
+                  <button onClick={() => handleDeletePost(post.id)}><DeleteOutlineIcon /></button>
                 </>
               )}
             </div>
