@@ -74,6 +74,7 @@ function Join(props) {
           <br />
           Confirm Password
         </label>
+        {password !== passwordConfirmation ? <p className='password-check'>Password doesn't match</p> : ''}
         <button>Join</button>
       </form>
       <p className='already-joined'>Already apart of SERVR? <Link to='/login'>LOG IN</Link></p>
