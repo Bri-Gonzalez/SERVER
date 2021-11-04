@@ -63,7 +63,7 @@ function App() {
             <CreatePost />
           </Route>
           <Route path='/server/:id/posts/:id'>
-              <Comments/>
+              <Comments currentUser={currentUser}/>
           </Route>
           <Route path='/server/search'>
             <Search currentUser={currentUser}/>

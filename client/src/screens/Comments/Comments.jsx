@@ -1,12 +1,16 @@
 import './Comments.css'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router'
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
+
+import EditIcon from '@mui/icons-material/Edit'
+import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline'
+
 import {getOnePost} from '../../services/posts'
 import { getAllComments, postComment } from '../../services/comments'
 
 
-function Comments() {
+function Comments(props) {
   const [post, setPost] = useState([])
   const [comments, setComments] = useState([])
   const [formData, setFormData] = useState({
@@ -77,6 +81,14 @@ function Comments() {
           <div key={comment.id}>
             <p>{comment.user.username}</p>
             <p>{comment.text}</p>
+            <div>
+              {props.currentUser?.id === comment.user_id && (
+                <>
+                  <Link to={`/edit-comment/${comment.id}`}><EditIcon /></Link>
+                  <DeleteOutlineIcon />
+                </>
+              )}
+            </div>
           </div>
         ))}
       </div>
