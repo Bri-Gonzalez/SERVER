@@ -1,7 +1,6 @@
 import './Comments.css'
 import { useState, useEffect } from 'react'
-import { useParams } from 'react-router'
-import { useHistory, Link } from 'react-router-dom'
+import { Redirect, Link, useParams } from 'react-router-dom'
 
 import EditIcon from '@mui/icons-material/Edit'
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline'
@@ -11,14 +10,14 @@ import { getAllComments, postComment } from '../../services/comments'
 
 
 function Comments(props) {
+  const { id, post_id } = useParams()
   const [post, setPost] = useState([])
   const [comments, setComments] = useState([])
-  const [formData, setFormData] = useState({
-    text: ''
-  })
   const [isCreated, setCreated] = useState(false)
-  const { id } = useParams()
-  const history = useHistory()
+  const [formData, setFormData] = useState({
+    text: '',
+    post_id: Number(post_id)
+  })
 
   useEffect(() => {
     const fetchPost = async () => {

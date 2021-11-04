@@ -1,6 +1,6 @@
 import './CreatePost.css'
 import { useState } from 'react'
-import { Redirect, useHistory, useParams } from 'react-router-dom'
+import { Redirect, useParams } from 'react-router-dom'
 import { postPost } from '../../services/posts'
 
 
