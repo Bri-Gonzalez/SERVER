@@ -41,7 +41,7 @@ function Search(props) {
         />
       </form>
       <div>
-        {props.currentUser ? <p>Your SERVR not exist? Create one <Link to='/server/create'>HERE</Link></p> : <p>Your SERVR not exist? <Link to='/login'>LOGIN</Link> to create!</p>}
+        {props.currentUser ? <p>Your Server not exist? Create one <Link to='/server/create'>HERE</Link></p> : <p>Your Server not exist? <Link to='/login'>LOGIN</Link> to create</p>}
       </div>
       <div>
         {searchResult.map((server) => (
