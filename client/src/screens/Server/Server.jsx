@@ -4,6 +4,7 @@ import { useParams } from 'react-router'
 import { Link } from 'react-router-dom'
 
 import EditIcon from '@mui/icons-material/Edit'
+import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline'
 
 import { getOneServer } from '../../services/servers'
 import { getAllPosts } from '../../services/posts'
@@ -52,6 +53,14 @@ function Server(props) {
             <Link to={`/server/${server.id}/posts/${post.id}`}>
               <p>{post.comments.length} Comments</p>
             </Link>
+            <div>
+              {props.currentUser?.id === post.user_id && (
+                <>
+                  <Link to={`/edit-post/${post.id}`}><EditIcon /></Link>
+                  <DeleteOutlineIcon />
+                </>
+              )}
+            </div>
           </div>
         ))}
       </div>
