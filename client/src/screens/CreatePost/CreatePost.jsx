@@ -11,7 +11,7 @@ function CreatePost() {
     text: '',
     image: '',
   })
-  const history = useHistory()
+  // const history = useHistory()
   const { title, text, image } = formData
 
   const handleChange = (e) => {
@@ -22,18 +22,21 @@ function CreatePost() {
     }))
   }
 
-  const handleCreatePost = async (id, formData) => {
+  const handleCreatePost = async (formData) => {
     const postData = await postPost(formData)
-    setCreated(prevState =>
-      prevState.map(post => (
-        post.id === Number(id) ? postData : post
-      )))
-    history.push('/server/search')
+    setCreated({postData})
   }
-
-  // if (isCreated) {
-  //   return <Redirect to={`/server/search`} />
+  // const handleCreatePost = async (formData) => {
+  //   const postData = await postPost(formData)
+  //   setCreated(prevState => {
+  //     const associatedServer = prevState.find(server => server.id === postData.server_id)
+  //     associatedServer.posts.push(postData.id)
+  //   })
   // }
+
+  if (isCreated) {
+    return <Redirect to={`/server/search`} />
+  }
 
   return (
     <div>
