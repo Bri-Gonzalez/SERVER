@@ -18,6 +18,9 @@ User.destroy_all
 @ladymaria = User.create!(username: 'ladymariaxoxo', email: 'ladymaria@email.com', password: '59k2swo4vcl')
 @huntersdream = User.create!(username: 'a_hunters_dream78', email: 'huntersdream@email.com', password: 'i5jeqapcj9s')
 @godgamer = User.create!(username: 'godgamer', email: 'godgamer@email.com', password: 'leyrube655i')
+@sylvannacrossing = User.create!(username: 'sylvannacrossing', email: 'sylvannacrossing@email.com', password: 'rufletut589')
+@teamwolfgang = User.create!(username: 'teamwolfgang', email: 'teamwolfgang@email.com', password: 'wolf47fheid')
+@celeste = User.create!(username: 'celeste001', email: 'celeste001@email.com', password: 'cel47d9chvi')
 
 puts "#{User.count} users created!"
 
@@ -56,6 +59,14 @@ puts "#{Server.count} servers created!"
   user: @breezychu
 )
 
+@animalcrossingpost1 = Post.create!(
+  title: "I can't wait for the new update to come out!",
+  text: 'I really want to get Ione on my island',
+  image: 'https://res.cloudinary.com/dfryxohde/image/upload/v1635980416/Server/animal-crossing-amiibo-card-series-5-jp-434-ione_akj2qd.png',
+  server: @animalcrossing,
+  user: @sylvannacrossing
+)
+
 puts "#{Post.count} posts created!"
 
 @bloodbornepost1comment1 = Comment.create!(
@@ -80,6 +91,18 @@ puts "#{Post.count} posts created!"
   text: 'took me forever to get all the weapons for platinum. congrats',
   post: @bloodbornepost1,
   user: @godgamer
+)
+
+@animalcrossingcomment1 = Comment.create!(
+  text: 'I really want her as a villager too!',
+  post: @animalcrossingpost1,
+  user: @teamwolfgang
+)
+
+@animalcrossingcomment2 = Comment.create!(
+  text: 'i am really looking forward to getting chabwick <3',
+  post: @animalcrossingpost1,
+  user: @celeste
 )
 
 puts "#{Comment.count} comments created!"
