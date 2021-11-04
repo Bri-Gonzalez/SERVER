@@ -4,6 +4,7 @@ import { Link, useParams, Redirect } from 'react-router-dom'
 
 import EditIcon from '@mui/icons-material/Edit'
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline'
+import AddIcon from '@mui/icons-material/Add'
 
 import {getOnePost} from '../../services/posts'
 import { getAllComments, postComment } from '../../services/comments'
@@ -78,7 +79,7 @@ function Comments(props) {
             onChange={handleChange}
           />
           <br/ >
-          <button>+ add comment</button>
+          <button><AddIcon/> add comment</button>
         </form>
       </div>
       <div>

@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 
 import EditIcon from '@mui/icons-material/Edit'
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline'
+import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline'
 
 import { getOneServer } from '../../services/servers'
 import { getAllPosts, deletePost } from '../../services/posts'
@@ -56,7 +57,7 @@ function Server(props) {
             {post.image ? <img src={post.image} alt={post.title} /> : ''}
             {post.text ? <p>{post.text}</p> : ''}
             <Link to={`/server/${server.id}/posts/${post.id}`}>
-              <p>{post.comments.length} Comments</p>
+              <p><ChatBubbleOutlineIcon/> {post.comments.length} Comments</p>
             </Link>
             <div>
               {props.currentUser?.id === post.user_id && (

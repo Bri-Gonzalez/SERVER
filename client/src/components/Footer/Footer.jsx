@@ -1,11 +1,10 @@
 import './Footer.css'
-
-import React from 'react'
+import GitHubIcon from '@mui/icons-material/GitHub'
 
 function Footer() {
   return (
     <div>
-      <p>Footer</p>
+      <a href='https://github.com/Bri-Gonzalez/SERVER'><GitHubIcon/></a>
     </div>
   )
 }

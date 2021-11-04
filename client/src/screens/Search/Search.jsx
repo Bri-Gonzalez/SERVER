@@ -32,7 +32,6 @@ function Search(props) {
       <form onSubmit={handleSubmit} className='search-form'>
         <SearchIcon/>
         <input
-          // value={servers.value}
           onChange={handleSearch}
           name='Search'
           placeholder= 'Search SERVR'
