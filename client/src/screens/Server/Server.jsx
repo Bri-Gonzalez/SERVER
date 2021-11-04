@@ -9,7 +9,7 @@ import { getOneServer } from '../../services/servers'
 import { getAllPosts } from '../../services/posts'
 
 
-function Server() {
+function Server(props) {
   const [server, setServer] = useState([])
   const [posts, setPosts] = useState([])
   const { id } = useParams()
@@ -39,9 +39,7 @@ function Server() {
           <EditIcon />
         </Link>
       </div>
-      <Link to='/create-post'>
-        <button>+ Create Post</button>
-      </Link>
+      {props.currentUser ? <Link to='/create-post'><button>+ Create Post</button></Link> : <Link to='/login'><button>+ Create Post</button></Link>}
       <div>
         {posts.map((post) => (
           <div key={post.id}>

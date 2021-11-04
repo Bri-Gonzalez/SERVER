@@ -75,7 +75,7 @@ function App() {
             <EditServer/>
           </Route>
           <Route path='/server/:id'>
-            <Server/>
+            <Server currentUser={currentUser}/>
           </Route>
           <Route path='/'>
             <Home />
