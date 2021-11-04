@@ -59,11 +59,14 @@ function App() {
           <Route path='/login'>
             <Login handleLogin={handleLogin}/>
           </Route>
-          <Route path='/create-post'>
+          <Route path='/server/:server_id/create-posts'>
             <CreatePost />
           </Route>
           <Route path='/server/:id/posts/:id'>
               <Comments currentUser={currentUser}/>
+          </Route>
+          <Route path='/server/:id/edit'>
+            <EditServer/>
           </Route>
           <Route path='/server/search'>
             <Search currentUser={currentUser}/>
@@ -71,12 +74,10 @@ function App() {
           <Route path='/server/create'>
             <CreateServer/>
           </Route>
-          <Route path='/server/:id/edit'>
-            <EditServer/>
-          </Route>
           <Route path='/server/:id'>
             <Server currentUser={currentUser}/>
           </Route>
+
           <Route path='/'>
             <Home />
           </Route>

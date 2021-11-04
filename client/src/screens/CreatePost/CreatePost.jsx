@@ -1,16 +1,19 @@
 import './CreatePost.css'
 import { useState } from 'react'
-import { Redirect, useHistory } from 'react-router-dom'
+import { Redirect, useHistory, useParams } from 'react-router-dom'
 import { postPost } from '../../services/posts'
 
 
 function CreatePost() {
+  const {server_id} = useParams()
   const [isCreated, setCreated] = useState(false)
   const [formData, setFormData] = useState({
     title: '',
     text: '',
     image: '',
+    server_id: Number(server_id)
   })
+
   // const history = useHistory()
   const { title, text, image } = formData
 

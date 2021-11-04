@@ -42,7 +42,7 @@ function Server(props) {
           </Link>
         )}
       </div>
-      {props.currentUser ? <Link to='/create-post'><button>+ Create Post</button></Link> : <Link to='/login'><button>+ Create Post</button></Link>}
+      {props.currentUser ? <Link to={`/server/${server.id}/create-posts`}><button>+ Create Post</button></Link> : <Link to='/login'><button>+ Create Post</button></Link>}
       <div>
         {posts.map((post) => (
           <div key={post.id}>
