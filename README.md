@@ -88,8 +88,8 @@ src
             |__ MainContainer.jsx
 |__ screens/
       |__ Comments/
-            |__ Comment.jsx
-            |__ Comment.css
+            |__ Comments.jsx
+            |__ Comments.css
       |__ CreatePost/
             |__ CreatePost.jsx
             |__ CreatePost.css
@@ -122,6 +122,7 @@ src
             |__ Server.css
 |__ services/
       |__ api-config.js
+      |__ auth.js
       |__ comments.js
       |__ posts.js
       |__ servers.js

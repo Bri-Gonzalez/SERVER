@@ -1,0 +1,23 @@
+.call-to-action img {
+  width: 100vw;
+  padding: 0;
+  display: block;
+  max-height: 890px;
+  object-fit: cover;
+}
+
+.carousel-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel {
+  width: 40%;
+}
+
+.carousel a, .carousel p {
+  color: #7BFDF8;
+  text-decoration: none;
+}
+

@@ -1,0 +1,38 @@
+.nav {
+  align-items: center;
+  background-color: #2A374A;
+  color: #7BFDF8;
+  display: flex;
+  height: 70px;
+  justify-content: space-between;
+  /* position: fixed; */
+  /* top: 0; */
+  width: 100%;
+}
+
+.nav h1 {
+  margin-left: 10px;
+}
+
+.nav a {
+  color: #7BFDF8;
+  text-decoration: none;
+}
+
+.nav a, p, button {
+  margin: 20px 30px 20px 20px;
+}
+
+.user-links, .non-user-links {
+  display: flex;
+  font-size: 17px;
+}
+
+.user-links button {
+  background-color: transparent;
+  border: none;
+  color: #7BFDF8;
+  font-size: 17px;
+  padding: 0;
+  margin-right: 30px;
+}
