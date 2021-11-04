@@ -14,7 +14,6 @@ function CreatePost() {
     server_id: Number(server_id)
   })
 
-  // const history = useHistory()
   const { title, text, image } = formData
 
   const handleChange = (e) => {
@@ -29,16 +28,9 @@ function CreatePost() {
     const postData = await postPost(formData)
     setCreated({postData})
   }
-  // const handleCreatePost = async (formData) => {
-  //   const postData = await postPost(formData)
-  //   setCreated(prevState => {
-  //     const associatedServer = prevState.find(server => server.id === postData.server_id)
-  //     associatedServer.posts.push(postData.id)
-  //   })
-  // }
 
   if (isCreated) {
-    return <Redirect to={`/server/search`} />
+    return <Redirect to={`/server/${server_id}`} />
   }
 
   return (
