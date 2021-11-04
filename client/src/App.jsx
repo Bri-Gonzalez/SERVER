@@ -16,6 +16,7 @@ import CreateServer from './screens/CreateServer/CreateServer'
 import {loginUser, registerUser, removeToken, verifyUser} from './services/auth'
 import Home from './screens/Home/Home'
 import CreatePost from './screens/CreatePost/CreatePost'
+import EditServer from './screens/EditServer/EditServer'
 
 
 function App() {
@@ -52,7 +53,7 @@ function App() {
     <div className="App">
       <Layout currentUser={currentUser} handleLogout={handleLogout}>
         <Switch>
-        <Route path='/join'>
+          <Route path='/join'>
             <Join handleJoin={handleJoin}/>
           </Route>
           <Route path='/login'>
@@ -64,11 +65,14 @@ function App() {
           <Route path='/server/:id/posts/:id'>
               <Comments/>
           </Route>
+          <Route path='/server/search'>
+            <Search />
+          </Route>
           <Route path='/server/create'>
             <CreateServer/>
           </Route>
-          <Route path='/server/search'>
-            <Search />
+          <Route path='/server/:id/edit'>
+            <EditServer/>
           </Route>
           <Route path='/server/:id'>
             <Server/>

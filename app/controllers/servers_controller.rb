@@ -21,7 +21,7 @@ class ServersController < ApplicationController
     @server.user = @current_user
 
     if @server.save
-      render json: @server, status: :created, location: @server
+      render json: @server, status: :created
     else
       render json: @server.errors, status: :unprocessable_entity
     end

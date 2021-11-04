@@ -1,9 +1,13 @@
 import './Server.css'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+
+import EditIcon from '@mui/icons-material/Edit'
+
 import { getOneServer } from '../../services/servers'
-import {getAllPosts} from '../../services/posts'
+import { getAllPosts } from '../../services/posts'
+
 
 function Server() {
   const [server, setServer] = useState([])
@@ -29,7 +33,12 @@ function Server() {
 
   return (
     <div>
-      <p>{server.name}</p>
+      <div>
+        <p>{server.name}</p>
+        <Link to={`/server/${server.id}/edit`}>
+          <EditIcon />
+        </Link>
+      </div>
       <Link to='/create-post'>
         <button>+ Create Post</button>
       </Link>
