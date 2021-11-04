@@ -56,7 +56,7 @@ function Server(props) {
             <div>
               {props.currentUser?.id === post.user_id && (
                 <>
-                  <Link to={`/edit-post/${post.id}`}><EditIcon /></Link>
+                  <Link to={`/server/${server.id}/post/${post.id}/edit`}><EditIcon /></Link>
                   <DeleteOutlineIcon />
                 </>
               )}

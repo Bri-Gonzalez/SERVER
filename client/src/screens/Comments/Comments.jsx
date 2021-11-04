@@ -1,6 +1,6 @@
 import './Comments.css'
 import { useState, useEffect } from 'react'
-import { Redirect, Link, useParams } from 'react-router-dom'
+import { Link, useParams, Redirect } from 'react-router-dom'
 
 import EditIcon from '@mui/icons-material/Edit'
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline'
@@ -18,6 +18,8 @@ function Comments(props) {
     text: '',
     post_id: Number(post_id)
   })
+
+  const { text } = formData
 
   useEffect(() => {
     const fetchPost = async () => {
@@ -38,21 +40,20 @@ function Comments(props) {
 
   const handleChange = (e) => {
     const { name, value } = e.target
-    setFormData({
-      ...formData,
+    setFormData((prevState) => ({
+      ...prevState,
       [name]: value,
-    })
+    }))
   }
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    const created = await postComment(formData)
-    setCreated({created})
+  const handleCreateComment = async (formData) => {
+    const commentData = await postComment(formData)
+    setCreated({commentData})
   }
 
-  // if (isCreated) {
-  //   history.push('/server/:id/posts/:id')
-  // }
+  if (isCreated) {
+    return <Redirect to={`/`} />
+  }
 
   return (
     <div>
@@ -63,12 +64,17 @@ function Comments(props) {
         {post.text ? <p>{post.text}</p> : ''}
       </div>
       <div>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={(e) => {
+          e.preventDefault()
+          handleCreateComment(formData)
+        }}>
           <textarea
-            placeholder='Add a comment'
-            name='comment'
-            required
             autoFocus
+            required
+            type='text'
+            name='text'
+            value={text}
+            placeholder='Add a comment'
             onChange={handleChange}
           />
           <br/ >

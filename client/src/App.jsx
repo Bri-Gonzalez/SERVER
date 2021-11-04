@@ -6,7 +6,6 @@ import { Switch, Route, useHistory } from 'react-router-dom'
 import Layout from './layouts/Layout/Layout'
 import Join from './screens/Join/Join'
 import Login from './screens/Login/Login'
-import MainContainer from './containers/MainContainer/MainContainer'
 
 import Search from './screens/Search/Search'
 import Server from './screens/Server/Server'
@@ -17,6 +16,7 @@ import {loginUser, registerUser, removeToken, verifyUser} from './services/auth'
 import Home from './screens/Home/Home'
 import CreatePost from './screens/CreatePost/CreatePost'
 import EditServer from './screens/EditServer/EditServer'
+import EditPost from './screens/EditPost/EditPost'
 
 
 function App() {
@@ -33,8 +33,8 @@ function App() {
 
   const handleLogin = async (formData) => {
     const userData = await loginUser(formData)
-    setCurrentUser(userData)
-    history.push('/')
+      setCurrentUser(userData)
+      history.push('/')
   }
 
   const handleJoin = async (formData) => {
@@ -62,6 +62,9 @@ function App() {
           <Route path='/server/:server_id/create-posts'>
             <CreatePost />
           </Route>
+          <Route path='/server/:server_id/post/:id/edit'>
+            <EditPost />
+          </Route>
           <Route path='/server/search'>
             <Search currentUser={currentUser}/>
           </Route>
@@ -69,7 +72,7 @@ function App() {
             <CreateServer/>
           </Route>
           <Route path='/server/:id/posts/:id'>
-              <Comments currentUser={currentUser}/>
+            <Comments currentUser={currentUser}/>
           </Route>
           <Route path='/server/:id/edit'>
             <EditServer/>
@@ -77,7 +80,6 @@ function App() {
           <Route path='/server/:id'>
             <Server currentUser={currentUser}/>
           </Route>
-
           <Route path='/'>
             <Home />
           </Route>
