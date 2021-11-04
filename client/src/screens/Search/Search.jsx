@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import SearchIcon from '@mui/icons-material/Search'
 import {getAllServers} from '../../services/servers'
 
-function Search() {
+function Search(props) {
   const [searchResult, setSearchResult] = useState([])
   const [servers, setServers] = useState([])
 
@@ -41,7 +41,7 @@ function Search() {
         />
       </form>
       <div>
-        <p>Your SERVR not exist? Create one <Link to='/server/create'>HERE</Link></p>
+        {props.currentUser ? <p>Your SERVR not exist? Create one <Link to='/server/create'>HERE</Link></p> : <p>Your SERVR not exist? <Link to='/login'>LOGIN</Link> to create!</p>}
       </div>
       <div>
         {searchResult.map((server) => (
