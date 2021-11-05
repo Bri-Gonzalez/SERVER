@@ -1,5 +1,6 @@
 import './Nav.css'
 import { NavLink } from 'react-router-dom'
+import MenuIcon from '@mui/icons-material/Menu'
 
 function Nav(props) {
 
@@ -19,6 +20,9 @@ function Nav(props) {
             <NavLink to='/login'>Login</NavLink>
           </div>
       )}
+      <div onClick={props.handleDrawerOpen} className='drawer'>
+        <MenuIcon style={{ fontSize: 35, margin: 30 }} />
+      </div>
     </div>
   )
 }

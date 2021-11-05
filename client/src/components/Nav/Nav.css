@@ -46,3 +46,18 @@
   padding: 0;
   margin-right: 30px;
 }
+
+.drawer {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .drawer {
+    display: contents;
+  }
+
+  .user-links, .non-user-links {
+    display: none;
+  }
+
+}
