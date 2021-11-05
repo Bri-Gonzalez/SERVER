@@ -17,18 +17,13 @@
 
 .nav a, .nav p, .nav button {
   color: #7BFDF8;
-  font-weight: 500;
+  font-family: 'Fira Sans', sans-serif;
   margin: 20px 30px 20px 20px;
   text-decoration: none;
   transition: 350ms;
 }
 
-.nav a:hover {
-  color: #F3BAFE;
-  cursor: pointer;
-}
-
-.nav button:hover {
+.nav a:hover, .nav button:hover {
   color: #F3BAFE;
   cursor: pointer;
 }

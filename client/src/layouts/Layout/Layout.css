@@ -1,0 +1,37 @@
+.drawer-greeting, 
+.user-links-drawer a, 
+.user-links-drawer button, 
+.non-user-links-drawer a {
+  color: #7BFDF8;
+  font-family: 'Fira Sans', sans-serif;
+  text-decoration: none;
+  transition: 350ms;
+}
+
+.user-links-drawer a, 
+.user-links-drawer button, 
+.non-user-links-drawer a {
+  margin: 5px 0;
+}
+
+.user-links-drawer a:hover, 
+.user-links-drawer button:hover, 
+.non-user-links-drawer a:hover {
+  color: #F3BAFE;
+  cursor: pointer;
+} 
+
+.user-links-drawer button {
+  background-color: transparent;
+  border: none;
+  color: #7BFDF8;
+  font-size: 17px;
+  padding: 0;
+}
+
+.user-links-drawer, .non-user-links-drawer {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}

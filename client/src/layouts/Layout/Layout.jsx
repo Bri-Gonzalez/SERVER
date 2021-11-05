@@ -8,20 +8,11 @@ import { styled, useTheme } from '@mui/material/styles'
 import Box from '@mui/material/Box'
 import Drawer from '@mui/material/Drawer'
 import MuiAppBar from '@mui/material/AppBar'
-import Toolbar from '@mui/material/Toolbar'
-import CssBaseline from '@mui/material/CssBaseline'
 import List from '@mui/material/List'
-import Typography from '@mui/material/Typography'
 import Divider from '@mui/material/Divider'
 import IconButton from '@mui/material/IconButton'
-import MenuIcon from '@mui/icons-material/Menu'
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 import ChevronRightIcon from '@mui/icons-material/ChevronRight'
-import ListItem from '@mui/material/ListItem'
-import ListItemIcon from '@mui/material/ListItemIcon'
-import ListItemText from '@mui/material/ListItemText'
-import InboxIcon from '@mui/icons-material/MoveToInbox'
-import MailIcon from '@mui/icons-material/Mail'
 import SearchIcon from '@mui/icons-material/Search'
 import LogoutIcon from '@mui/icons-material/Logout'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'
@@ -29,25 +20,6 @@ import PersonAddIcon from '@mui/icons-material/PersonAdd'
 import LoginIcon from '@mui/icons-material/Login';
 
 const drawerWidth = 240
-
-// const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
-//   ({ theme, open }) => ({
-//     flexGrow: 1,
-//     padding: theme.spacing(3),
-//     transition: theme.transitions.create('margin', {
-//       easing: theme.transitions.easing.sharp,
-//       duration: theme.transitions.duration.leavingScreen,
-//     }),
-//     marginRight: -drawerWidth,
-//     ...(open && {
-//       transition: theme.transitions.create('margin', {
-//         easing: theme.transitions.easing.easeOut,
-//         duration: theme.transitions.duration.enteringScreen,
-//       }),
-//       marginRight: 0,
-//     }),
-//   })
-// )
 
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== 'open',
@@ -91,21 +63,11 @@ function Layout(props) {
     <div>
       <Box sx={{ display: 'flex' }}>
         <AppBar position='fixed' open={open}>
-          {/* <IconButton
-            color='inherit'
-            aria-label='open drawer'
-            edge='end'
-            onClick={handleDrawerOpen}
-            sx={{ ...(open && { display: 'none' }) }}
-          > */}
-          {/* <MenuIcon
-                      color='inherit'
-                      aria-label='open drawer'
-                      edge='end'
-                      onClick={handleDrawerOpen}
-                      sx={{ ...(open && { display: 'none' }) }}/> */}
-          {/* </IconButton> */}
-          <Nav currentUser={props.currentUser} handleLogout={props.handleLogout} handleDrawerOpen={handleDrawerOpen} open={open}/>
+          <Nav
+            currentUser={props.currentUser}
+            handleLogout={props.handleLogout}
+            handleDrawerOpen={handleDrawerOpen}
+          />
         </AppBar>
         <Drawer
           sx={{
@@ -113,6 +75,7 @@ function Layout(props) {
             flexShrink: 0,
             '& .MuiDrawer-paper': {
               width: drawerWidth,
+              background: '#2a374af3'
             },
           }}
           variant='persistent'
@@ -122,29 +85,29 @@ function Layout(props) {
           <DrawerHeader>
             <IconButton onClick={handleDrawerClose}>
               {theme.direction === 'rtl' ? (
-                <ChevronLeftIcon />
+                <ChevronLeftIcon style={{ fontSize: 30, color: '#7BFDF8' }}/>
               ) : (
-                <ChevronRightIcon />
+                <ChevronRightIcon style={{ fontSize: 30, color: '#7BFDF8' }}/>
               )}
             </IconButton>
           </DrawerHeader>
           {props.currentUser && (
             <div className='drawer-greeting'>
-              <AccountCircleIcon/><p>Hello, {props.currentUser.username}</p>
+              <AccountCircleIcon style={{ fontSize: 30 }}/><p>Hello, {props.currentUser.username}</p>
             </div>
           )}
-          <Divider />
+          <Divider style={{background: '#7BFDF8'}}/>
           <List>
             {props.currentUser ? (
               <div className='user-links-drawer'>
-                <NavLink to='/server/search'><SearchIcon />Search</NavLink>
-                <button onClick={props.handleLogout}><LogoutIcon/>Logout</button>
+                <NavLink to='/server/search'><SearchIcon style={{ fontSize: 30 }}/>Search</NavLink>
+                <button onClick={props.handleLogout}><LogoutIcon style={{ fontSize: 30 }}/>Logout</button>
               </div>
             ) : (
               <div className='non-user-links-drawer'>
-                <NavLink to='/server/search'><SearchIcon /> Search</NavLink>
-                <NavLink to='/join'><PersonAddIcon/>Join</NavLink>
-                <NavLink to='/login'><LoginIcon/>Login</NavLink>
+                <NavLink to='/server/search'><SearchIcon style={{ fontSize: 30 }}/> Search</NavLink>
+                <NavLink to='/join'><PersonAddIcon style={{ fontSize: 30 }}/>Join</NavLink>
+                <NavLink to='/login'><LoginIcon style={{ fontSize: 30 }}/>Login</NavLink>
               </div>
             )}
           </List>
