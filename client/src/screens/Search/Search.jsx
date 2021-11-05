@@ -56,7 +56,7 @@ function Search(props) {
         {searchResult.map((server) => (
           <div key={server.id} className='searched-server'>
             <Link to={`/server/${server.id}`}>
-              <p>{server.name}</p>
+              <button>{server.name}</button>
             </Link>
           </div>
         ))}
