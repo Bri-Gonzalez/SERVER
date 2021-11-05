@@ -7,13 +7,11 @@ import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline'
 import AddIcon from '@mui/icons-material/Add'
 
 import {getOnePost} from '../../services/posts'
-import { getAllComments, postComment } from '../../services/comments'
-
+import { postComment } from '../../services/comments'
 
 function Comments(props) {
-  const { id, post_id } = useParams()
+  const { post_id } = useParams()
   const [post, setPost] = useState([])
-  const [comments, setComments] = useState([])
   const [isCreated, setCreated] = useState(false)
   const [formData, setFormData] = useState({
     text: '',
@@ -24,20 +22,11 @@ function Comments(props) {
 
   useEffect(() => {
     const fetchPost = async () => {
-      const post = await getOnePost(id)
+      const post = await getOnePost(post_id)
       setPost(post)
     }
     fetchPost()
-  }, [id])
-
-  useEffect(() => {
-    const fetchComments = async () => {
-      const commentList = await getAllComments()
-      const postComments = commentList.filter((comment) => comment.post_id === Number(id))
-      setComments(postComments)
-    }
-    fetchComments()
-  }, [])
+  }, [isCreated])
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -46,14 +35,10 @@ function Comments(props) {
       [name]: value,
     }))
   }
-
+  
   const handleCreateComment = async (formData) => {
     const commentData = await postComment(formData)
-    setCreated({commentData})
-  }
-
-  if (isCreated) {
-    return <Redirect to={`/`} />
+    setCreated(commentData)
   }
 
   return (
@@ -83,7 +68,7 @@ function Comments(props) {
         </form>
       </div>
       <div>
-        {comments.map((comment) => (
+        {post?.comments?.map((comment) => (
           <div key={comment.id}>
             <p>{comment.user.username}</p>
             <p>{comment.text}</p>

@@ -7,7 +7,6 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
 
-    #render json: @posts, include: :comments
     render json: @posts, include: [
       user: { only: ['username'] },
       comments: { only: ['id'] }

@@ -29,6 +29,8 @@ function Home() {
       <div className='carousel-container'>
         <div className='carousel'>
           <Carousel
+            navButtonsAlwaysVisible={true}
+            stopAutoPlayOnHover={true}
             navButtonsProps={{
               style: {
                 backgroundColor: 'transparent',
@@ -37,9 +39,11 @@ function Home() {
               }
             }}>
             {posts.map((post) => (
-              <div key={post.id}>
+              <div key={post.id} className='carousel-posts'>
                 <Link to={`/posts/${post.id}`}>
-                  <p>{post.title}</p>
+                  <div className='testing'>
+                    <p>{post.title}</p>
+                  </div>
                 </Link>
               </div>
             ))}

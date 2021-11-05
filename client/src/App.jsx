@@ -71,7 +71,7 @@ function App() {
           <Route path='/server/create'>
             <CreateServer/>
           </Route>
-          <Route path='/server/:id/posts/:id'>
+          <Route path='/server/:id/posts/:post_id'>
             <Comments currentUser={currentUser}/>
           </Route>
           <Route path='/server/:id/edit'>
