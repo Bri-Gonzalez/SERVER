@@ -1,4 +1,5 @@
 import './EditPost.css'
+import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { useParams, Redirect } from 'react-router-dom'
 import {getOnePost, putPost} from '../../services/posts'
@@ -13,7 +14,7 @@ function EditPost() {
     server_id: Number(server_id)
   })
 
-  const { title, text, image } = formData
+  const { title, text } = formData
 
   useEffect(() => {
     const fetchPost = async () => {
@@ -34,6 +35,18 @@ function EditPost() {
   const handleUpdatePost = async (formData) => {
     const updatePost = await putPost(id, formData)
     setUpdated(updatePost)
+  }
+
+  const uploadImage = async (e) => {
+    const files = e.target.files
+    const data = new FormData()
+    data.append("file", files[0])
+    data.append("upload_preset", "server")
+    const res = await axios.post("https://api.cloudinary.com/v1_1/dfryxohde/image/upload", data)
+    setFormData((prevState) => ({
+      ...prevState,
+      image: res.data.url
+    }))
   }
 
   if (isUpdated) {
@@ -68,10 +81,9 @@ function EditPost() {
         />
         <label>
           <input
-            type='text'
-            name='image'
-            value={image}
-            onChange={handleChange}
+            type='file'
+            name='file'
+            onChange={uploadImage}
           />
           <br />
           Image URL

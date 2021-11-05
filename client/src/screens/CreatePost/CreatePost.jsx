@@ -1,11 +1,10 @@
 import './CreatePost.css'
+import axios from 'axios'
 import { useState } from 'react'
 import { Redirect, useParams } from 'react-router-dom'
 import { postPost } from '../../services/posts'
-//CLOUDINARY_URL=cloudinary://651251922364575:Ab0ee2RgtOR18NeDCM1rK3PZN5w@dfryxohde
-//https://api.cloudinary.com/v1_1/dfryxohde
 
-function CreatePost() {
+function CreatePost(props) {
   const { server_id } = useParams()
   const [isCreated, setCreated] = useState(false)
   const [formData, setFormData] = useState({
@@ -15,7 +14,7 @@ function CreatePost() {
     server_id: Number(server_id),
   })
 
-  const { title, text, image } = formData
+  const { title, text } = formData
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -30,23 +29,20 @@ function CreatePost() {
     setCreated({ postData })
   }
 
-  if (isCreated) {
-    return <Redirect to={`/server/${server_id}`} />
-  }
-
-  //I used a video by Coding Shiksha to help me write the code for uploading images
-  //and tweaked the code to fit my project.
-  //https://www.youtube.com/watch?v=cc0oMYaduuA
   const uploadImage = async (e) => {
     const files = e.target.files
     const data = new FormData()
-    data.append('file', files[0])
-    data.append('upload_preset', 'Server')
-    const res = await axios.post(
-      'https://api.cloudinary.com/v1_1/dfryxohde/image/upload',
-      data
-    )
-    props.setImage(res.data.url)
+    data.append("file", files[0])
+    data.append("upload_preset", "server")
+    const res = await axios.post("https://api.cloudinary.com/v1_1/dfryxohde/image/upload", data)
+    setFormData((prevState) => ({
+      ...prevState,
+      image: res.data.url
+    }))
+  }
+
+  if (isCreated) {
+    return <Redirect to={`/server/${server_id}`} />
   }
 
   return (
@@ -79,10 +75,9 @@ function CreatePost() {
         />
         <label>
           <input
-            type='text'
-            name='image'
-            value={image}
-            onChange={handleChange}
+            type='file'
+            name='file'
+            onChange={uploadImage}
           />
           <br />
           Image URL

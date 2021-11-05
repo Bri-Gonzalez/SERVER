@@ -66,7 +66,7 @@ function App() {
             <Login handleLogin={handleLogin}/>
           </Route>
           <Route path='/server/:server_id/create-posts'>
-            <CreatePost />
+            <CreatePost/>
           </Route>
           <Route path='/server/:server_id/post/:id/edit'>
             <EditPost />
