@@ -17,6 +17,7 @@
 
 .nav a, .nav p, .nav button {
   color: #7BFDF8;
+  font-weight: 500;
   margin: 20px 30px 20px 20px;
   text-decoration: none;
   transition: 350ms;
