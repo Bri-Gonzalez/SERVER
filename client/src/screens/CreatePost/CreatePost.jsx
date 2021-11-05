@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useState } from 'react'
 import { Redirect, useParams } from 'react-router-dom'
 import { postPost } from '../../services/posts'
+import PanoramaIcon from '@mui/icons-material/Panorama'
 
 function CreatePost(props) {
   const { server_id } = useParams()
@@ -32,12 +33,15 @@ function CreatePost(props) {
   const uploadImage = async (e) => {
     const files = e.target.files
     const data = new FormData()
-    data.append("file", files[0])
-    data.append("upload_preset", "server")
-    const res = await axios.post("https://api.cloudinary.com/v1_1/dfryxohde/image/upload", data)
+    data.append('file', files[0])
+    data.append('upload_preset', 'server')
+    const res = await axios.post(
+      'https://api.cloudinary.com/v1_1/dfryxohde/image/upload',
+      data
+    )
     setFormData((prevState) => ({
       ...prevState,
-      image: res.data.url
+      image: res.data.url,
     }))
   }
 
@@ -66,6 +70,7 @@ function CreatePost(props) {
           <br />
           Title
         </label>
+        <br />
         <textarea
           type='text'
           name='text'
@@ -73,15 +78,14 @@ function CreatePost(props) {
           placeholder='Text (optional)'
           onChange={handleChange}
         />
-        <label>
-          <input
-            type='file'
-            name='file'
-            onChange={uploadImage}
-          />
-          <br />
-          Image URL
-        </label>
+        <div className='file-div'>
+          <label className='file-label'>
+            <input type='file' name='file' onChange={uploadImage} />
+            <br />
+            <PanoramaIcon /> Upload Image
+          </label>
+        </div>
+        <br />
         <button>Post</button>
       </form>
     </div>

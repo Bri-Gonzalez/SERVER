@@ -1,3 +1,74 @@
 .edit-post-container {
-  margin-top: 70px;
+  color: #7BFDF8;
+  font-family: 'Fira Sans', sans-serif;
+  margin-top: 100px;
 }
+
+.edit-post-container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.edit-post-container p {
+  font-size: 20px;
+}
+
+.edit-post-container label {
+  font-size: 14px;
+}
+
+.edit-post-container input {
+  background-color: transparent;
+  border-left-style: hidden;
+  border-right-style: hidden;
+  border-top-style: hidden;
+  border-bottom: 2px solid #7BFDF8;
+  color: #7BFDF8;
+  margin: 20px 0 5px 0;
+  width: 50vw;
+}
+
+.edit-post-container input:focus {
+  background-color: #232e3e;
+  border-radius: 2px;
+  outline: 2px solid #2A374A;
+}
+
+.edit-post-container textarea {
+  background-color: transparent;
+  border: 2px solid #7BFDF8;
+  border-radius: 5px;
+  color: #7BFDF8;
+  height: 100px;
+  width: 50vw;
+}
+
+.edit-post-container ::placeholder {
+  color: #7BFDF8;
+  padding: 5px 0 0 10px;
+}
+
+.edit-post-container input[type='file'] {
+  display: none;
+}
+
+.edit-post-container button {
+  background-color: transparent;
+  border: 2px solid #7BFDF8;
+  border-radius: 5px;
+  color: #7BFDF8;
+  font-size: 15px;
+  padding: 5px;
+  transition: 350ms;
+  width: 50vw;
+}
+
+.edit-post-container button:hover {
+  border-color: #F3BAFE;
+  color: #F3BAFE;
+  cursor: pointer;
+}
+

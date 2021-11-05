@@ -2,16 +2,17 @@ import './EditPost.css'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { useParams, Redirect } from 'react-router-dom'
-import {getOnePost, putPost} from '../../services/posts'
+import { getOnePost, putPost } from '../../services/posts'
+import PanoramaIcon from '@mui/icons-material/Panorama'
 
 function EditPost() {
-  const {server_id, id} = useParams()
+  const { server_id, id } = useParams()
   const [isUpdated, setUpdated] = useState(false)
   const [formData, setFormData] = useState({
     title: '',
     text: '',
     image: '',
-    server_id: Number(server_id)
+    server_id: Number(server_id),
   })
 
   const { title, text } = formData
@@ -40,12 +41,15 @@ function EditPost() {
   const uploadImage = async (e) => {
     const files = e.target.files
     const data = new FormData()
-    data.append("file", files[0])
-    data.append("upload_preset", "server")
-    const res = await axios.post("https://api.cloudinary.com/v1_1/dfryxohde/image/upload", data)
+    data.append('file', files[0])
+    data.append('upload_preset', 'server')
+    const res = await axios.post(
+      'https://api.cloudinary.com/v1_1/dfryxohde/image/upload',
+      data
+    )
     setFormData((prevState) => ({
       ...prevState,
-      image: res.data.url
+      image: res.data.url,
     }))
   }
 
@@ -56,10 +60,12 @@ function EditPost() {
   return (
     <div className='edit-post-container'>
       <p>Edit Post</p>
-      <form onSubmit={(e) => {
-        e.preventDefault()
-        handleUpdatePost(formData)
-      }}>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault()
+          handleUpdatePost(formData)
+        }}
+      >
         <label>
           <input
             autoFocus
@@ -72,6 +78,7 @@ function EditPost() {
           <br />
           Title
         </label>
+        <br />
         <textarea
           type='text'
           name='text'
@@ -79,15 +86,14 @@ function EditPost() {
           placeholder='Text (optional)'
           onChange={handleChange}
         />
-        <label>
-          <input
-            type='file'
-            name='file'
-            onChange={uploadImage}
-          />
-          <br />
-          Image URL
-        </label>
+        <div className='file-div'>
+          <label className='file-label'>
+            <input type='file' name='file' onChange={uploadImage} />
+            <br />
+            <PanoramaIcon /> Upload Image
+          </label>
+        </div>
+        <br />
         <button>Save</button>
       </form>
     </div>

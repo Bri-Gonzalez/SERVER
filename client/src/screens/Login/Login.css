@@ -1,5 +1,5 @@
 .login-container {
-  margin-top: 70px;
+  margin-top: 100px;
 }
 
 .login-title {
@@ -33,7 +33,7 @@
 
 .login-container label {
   color: #7BFDF8;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .login-container button {
