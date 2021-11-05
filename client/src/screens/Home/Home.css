@@ -1,16 +1,55 @@
-.call-to-action img {
-  width: 100vw;
-  padding: 0;
+.header-container {
+  position: relative;
+}
+
+.header-container img {
   display: block;
   max-height: 890px;
   object-fit: cover;
+  padding: 0;
+  width: 100vw;
+}
+
+.call-to-action {
+  /* align-items: center; */
+  background-color: #b8b4ee46;
+  border-radius: 15px;
+  color: #2A374A;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 2.5vw;
+  font-weight: 500;
+  height: 70%;
+  justify-content: center;
+  left: 60px;
+  max-height: 500px;
+  position: absolute;
+  text-align: center;
+  top: 10%;
+  width: 35%;
+}
+
+.call-to-action p {
+  padding: 0 30px 5px 30px;
+}
+
+.call-to-action button {
+  background-color: transparent;
+  border: 2px solid #7BFDF8;
+  border-radius: 10px;
+  color: #7BFDF8;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 2.2vw;
+  padding: 20px;
+  width: 70%;
 }
 
 .carousel-container {
   align-items: center;
   display: flex;
+  height: 35vh;
   justify-content: center;
-
 }
 
 .carousel {
@@ -18,16 +57,8 @@
 }
 
 .carousel-posts {
-  /* align-content: center; */
-  /* display: flex;
-  justify-content: center; */
-  /* margin: 0 auto; */
   display: inline-block;
-  width: 500px;
-}
-
-.testing {
-  /* width: 90%; */
+  width: 70%;
 }
 
 .carousel a, .carousel p {
@@ -35,3 +66,10 @@
   text-decoration: none;
 }
 
+.carousel-username {
+  font-size: 15px;
+}
+
+.carousel-title {
+  font-size: 19px;
+}

@@ -1,7 +1,7 @@
 import './Home.css'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import Carousel from 'react-material-ui-carousel'   
+import Carousel from 'react-material-ui-carousel'
 import { getAllPosts } from '../../services/posts'
 
 function Home() {
@@ -17,12 +17,12 @@ function Home() {
 
   return (
     <div>
-      <div className='call-to-action'>
+      <div className='header-container'>
         <img src='https://res.cloudinary.com/dfryxohde/image/upload/v1635958718/Server/javier-martinez-hUD0PUczwJQ-unsplash_2_vxdtuw.jpg' alt='xbox controller' />
-        <div>
+        <div className='call-to-action'>
           <p>A place where gamers hang out, collaborate, show creations, and share accomplishments.</p>
           <Link to='/server/search'>
-            <button>FIND YOUR SERVR</button>
+            <button><b>FIND YOUR SERVR</b></button>
           </Link>
         </div>
       </div>
@@ -41,8 +41,9 @@ function Home() {
             {posts.map((post) => (
               <div key={post.id} className='carousel-posts'>
                 <Link to={`/posts/${post.id}`}>
-                  <div className='testing'>
-                    <p>{post.title}</p>
+                  <div>
+                    <p className='carousel-username'>{post.user.username}</p>
+                    <p className='carousel-title'>{post.title}</p>
                   </div>
                 </Link>
               </div>
