@@ -1,9 +1,9 @@
+import './Layout.css'
+import * as React from 'react'
 import Nav from '../../components/Nav/Nav'
 import Footer from '../../components/Footer/Footer'
-import './Layout.css'
 import { NavLink } from 'react-router-dom'
 
-import * as React from 'react'
 import { styled, useTheme } from '@mui/material/styles'
 import Box from '@mui/material/Box'
 import Drawer from '@mui/material/Drawer'
@@ -17,7 +17,7 @@ import SearchIcon from '@mui/icons-material/Search'
 import LogoutIcon from '@mui/icons-material/Logout'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 import PersonAddIcon from '@mui/icons-material/PersonAdd'
-import LoginIcon from '@mui/icons-material/Login';
+import LoginIcon from '@mui/icons-material/Login'
 
 const drawerWidth = 240
 

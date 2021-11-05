@@ -28,7 +28,7 @@
 
 .join-container input:focus {
   background-color: #232e3e;
-  border-radius: 2px;
+  border: none;
   outline: 2px solid #2A374A;
 }
 

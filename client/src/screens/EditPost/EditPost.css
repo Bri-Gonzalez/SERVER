@@ -12,6 +12,11 @@
   text-align: left;
 }
 
+.edit-post-container input, 
+.edit-post-container textarea {
+  margin: 10px;
+}
+
 .edit-post-container p {
   font-size: 20px;
 }
@@ -33,7 +38,7 @@
 
 .edit-post-container input:focus {
   background-color: #232e3e;
-  border-radius: 2px;
+  border: none;
   outline: 2px solid #2A374A;
 }
 

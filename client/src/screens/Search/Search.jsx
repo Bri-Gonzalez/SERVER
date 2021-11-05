@@ -2,7 +2,7 @@ import './Search.css'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import SearchIcon from '@mui/icons-material/Search'
-import {getAllServers} from '../../services/servers'
+import { getAllServers } from '../../services/servers'
 
 function Search(props) {
   const [searchResult, setSearchResult] = useState([])
@@ -17,9 +17,8 @@ function Search(props) {
     fetchServers()
   }, [])
 
-
   const handleSearch = (e) => {
-    const results = servers.filter((server) => 
+    const results = servers.filter((server) =>
       server.name.toLowerCase().includes(e.target.value.toLowerCase())
     )
     setSearchResult(results)
@@ -30,27 +29,37 @@ function Search(props) {
   return (
     <div className='search-container'>
       <form onSubmit={handleSubmit} className='search-form'>
-        <SearchIcon/>
-        <input
-          onChange={handleSearch}
-          name='Search'
-          placeholder= 'Search SERVR'
-          type='text'
-          autoFocus
-        />
+        <div className='search-bar'>
+          <SearchIcon />
+          <input
+            onChange={handleSearch}
+            name='Search'
+            placeholder={'Search SERVER'}
+            type='text'
+            autoFocus
+          />
+        </div>
       </form>
-      <div>
-        {props.currentUser ? <p>Your Server not exist? Create one <Link to='/server/create'>HERE</Link></p> : <p>Your Server not exist? <Link to='/login'>LOGIN</Link> to create</p>}
+      <div className='not-exist-question'>
+        {props.currentUser ? (
+          <p>
+            Your Server not exist? Create one{' '}
+            <Link to='/server/create'>HERE</Link>
+          </p>
+        ) : (
+          <p>
+            Your Server not exist? <Link to='/login'>LOGIN</Link> to create
+          </p>
+        )}
       </div>
-      <div>
+      <div className='searched-server-container'>
         {searchResult.map((server) => (
-          <div key={server.id}>
+          <div key={server.id} className='searched-server'>
             <Link to={`/server/${server.id}`}>
               <p>{server.name}</p>
             </Link>
           </div>
-        )
-        )}
+        ))}
       </div>
     </div>
   )

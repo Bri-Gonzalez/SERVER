@@ -49,10 +49,15 @@
 @media screen and (max-width: 800px) {
   .drawer {
     display: contents;
+    transition: 350ms;
+  }
+
+  .drawer:hover {
+    color: #F3BAFE;
+    cursor: pointer;
   }
 
   .user-links, .non-user-links {
     display: none;
   }
-
 }
