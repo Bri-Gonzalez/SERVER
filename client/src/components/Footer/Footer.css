@@ -1,3 +1,11 @@
+.footer-container {
+  align-items: center;
+  display: flex;
+  height: 70px;
+  justify-content: center;
+  width: 100%;
+}
+
 .footer-container a {
   color: #7BFDF8;
   transition: 350ms;
@@ -5,4 +13,5 @@
 
 .footer-container a:hover {
   color: #F3BAFE;
+  cursor: pointer;
 }

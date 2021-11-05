@@ -74,6 +74,12 @@
 .carousel a, .carousel p {
   color: #7BFDF8;
   text-decoration: none;
+  transition: 350ms;
+}
+
+.carousel a:hover, .carousel p:hover {
+  color: #F3BAFE;
+  cursor: pointer;
 }
 
 .carousel-username {
