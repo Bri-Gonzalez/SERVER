@@ -1,6 +1,6 @@
 import './Comments.css'
 import { useState, useEffect } from 'react'
-import { Link, useParams, useHistory } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 import EditIcon from '@mui/icons-material/Edit'
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline'
@@ -12,13 +12,12 @@ import { postComment, deleteComment, getAllComments } from '../../services/comme
 function Comments(props) {
   const { post_id, id } = useParams()
   const [post, setPost] = useState([])
-  // const [comments, setComments] = useState([])
+  const [comments, setComments] = useState([])
   const [isCreated, setCreated] = useState(false)
   const [formData, setFormData] = useState({
     text: '',
     post_id: Number(post_id)
   })
-  const history = useHistory()
 
   const { text } = formData
 
@@ -28,16 +27,16 @@ function Comments(props) {
       setPost(post)
     }
     fetchPost()
-  }, [isCreated, post_id])
+  }, [post_id])
 
-  // useEffect(() => {
-  //   const fetchComments = async () => {
-  //     const commentList = await getAllComments()
-  //     const postComments = commentList.filter((comment) => comment.post_id === Number(id))
-  //     setComments(postComments)
-  //   }
-  //   fetchComments()
-  // }, [])
+  useEffect(() => {
+    const fetchComments = async () => {
+      const commentList = await getAllComments()
+      const postComments = commentList.filter((post) => post.post_id === Number(post_id))
+      setComments(postComments)
+    }
+    fetchComments()
+  }, [isCreated])
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -54,14 +53,8 @@ function Comments(props) {
 
   const handleDeleteComment = async (id) => {
     await deleteComment(id)
-    // setComment((prevState) => prevState.filter((comment) => comment.id !== id))
-    history.push(`/server/${id}/posts/${post_id}`)
+    setComments((prevState) => prevState.filter((comment) => comment.id !== id))
   }
-
-  // const handleDeleteComment = async () => {
-  //   await deleteComment(id)
-  //   history.push(`/server/${id}/posts/${post_id}`)
-  // }
 
   return (
     <div>
@@ -90,7 +83,7 @@ function Comments(props) {
         </form>
       </div>
       <div>
-        {post?.comments?.map((comment) => (
+        {comments.map((comment) => (
           <div key={comment.id}>
             <p>{comment.user.username}</p>
             <p>{comment.text}</p>
