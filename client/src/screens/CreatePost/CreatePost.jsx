@@ -34,7 +34,7 @@ function CreatePost() {
   }
 
   return (
-    <div>
+    <div className='create-post-container'>
       <p>Create a Post</p>
       <form onSubmit={(e) => {
         e.preventDefault()

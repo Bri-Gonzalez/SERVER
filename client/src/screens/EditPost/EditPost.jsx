@@ -41,7 +41,7 @@ function EditPost() {
   }
 
   return (
-    <div>
+    <div className='edit-post-container'>
       <p>Edit Post</p>
       <form onSubmit={(e) => {
         e.preventDefault()

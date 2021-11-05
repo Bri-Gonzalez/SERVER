@@ -1,3 +1,7 @@
+.home-container {
+  margin-top: 70px;
+}
+
 .header-container {
   position: relative;
 }
@@ -11,7 +15,6 @@
 }
 
 .call-to-action {
-  /* align-items: center; */
   background-color: #b8b4ee46;
   border-radius: 15px;
   color: #2A374A;
@@ -42,7 +45,14 @@
   font-family: 'Fira Sans', sans-serif;
   font-size: 2.2vw;
   padding: 20px;
+  transition: 350ms;
   width: 70%;
+}
+
+.call-to-action button:hover {
+  border-color: #F3BAFE;
+  color: #F3BAFE;
+  cursor: pointer;
 }
 
 .carousel-container {

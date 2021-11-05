@@ -1,26 +1,35 @@
 .nav {
   align-items: center;
-  background-color: #2A374A;
+  background-color: #2a374af3;
   color: #7BFDF8;
   display: flex;
   height: 70px;
   justify-content: space-between;
-  /* position: fixed; */
-  /* top: 0; */
+  position: fixed;
+  top: 0;
   width: 100%;
+  z-index: 2;
 }
 
 .nav h1 {
   margin-left: 10px;
 }
 
-.nav a {
+.nav a, .nav p, .nav button {
   color: #7BFDF8;
+  margin: 20px 30px 20px 20px;
   text-decoration: none;
+  transition: 350ms;
 }
 
-.nav a, .nav p, .nav button {
-  margin: 20px 30px 20px 20px;
+.nav a:hover {
+  color: #F3BAFE;
+  cursor: pointer;
+}
+
+.nav button:hover {
+  color: #F3BAFE;
+  cursor: pointer;
 }
 
 .user-links, .non-user-links {

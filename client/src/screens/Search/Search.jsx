@@ -28,7 +28,7 @@ function Search(props) {
   const handleSubmit = (e) => e.preventDefault()
 
   return (
-    <div>
+    <div className='search-container'>
       <form onSubmit={handleSubmit} className='search-form'>
         <SearchIcon/>
         <input

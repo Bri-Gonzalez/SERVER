@@ -36,7 +36,7 @@ function Comments(props) {
       setComments(postComments)
     }
     fetchComments()
-  }, [isCreated])
+  }, [isCreated, post_id])
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -57,7 +57,7 @@ function Comments(props) {
   }
 
   return (
-    <div>
+    <div className='comments-pg-container'>
       <div>
         <p>{post?.user?.username}</p>
         <p>{post.title}</p>

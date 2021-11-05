@@ -16,13 +16,13 @@ function Home() {
   }, [])
 
   return (
-    <div>
+    <div className='home-container'>
       <div className='header-container'>
         <img src='https://res.cloudinary.com/dfryxohde/image/upload/v1635958718/Server/javier-martinez-hUD0PUczwJQ-unsplash_2_vxdtuw.jpg' alt='xbox controller' />
         <div className='call-to-action'>
           <p>A place where gamers hang out, collaborate, show creations, and share accomplishments.</p>
           <Link to='/server/search'>
-            <button><b>FIND YOUR SERVR</b></button>
+            <button><b>FIND YOUR SERVER</b></button>
           </Link>
         </div>
       </div>

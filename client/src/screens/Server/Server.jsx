@@ -31,7 +31,7 @@ function Server(props) {
       setPosts(serverPosts)
     }
     fetchPosts()
-  }, [])
+  }, [id])
 
   const handleDeletePost = async (id) => {
     await deletePost(id)
@@ -39,7 +39,7 @@ function Server(props) {
   }
 
   return (
-    <div>
+    <div className='server-container'>
       <div>
         <p>{server.name}</p>
         {props.currentUser?.id === server.user_id && (

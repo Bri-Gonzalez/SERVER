@@ -38,7 +38,7 @@ function EditServer() {
   }
 
   return (
-    <div>
+    <div className='edit-server-container'>
       <p>Edit Server</p>
       <form onSubmit={(e) => {
         e.preventDefault()

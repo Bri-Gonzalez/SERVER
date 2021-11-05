@@ -50,6 +50,7 @@ function Login(props) {
           <br />
           Password
         </label>
+        {/* {props.isNotValid ? <p>Incorrect username or password</p> : null} */}
         <button>Login</button>
       </form>
       <p className='new-to-link'>New to Server? <Link to='/join'>JOIN NOW</Link></p>

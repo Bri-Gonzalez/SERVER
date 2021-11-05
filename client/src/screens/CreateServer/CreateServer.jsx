@@ -30,7 +30,7 @@ function CreateServer() {
 
 
   return (
-    <div>
+    <div className='create-server-container'>
       <p>Create a Server</p>
       <form onSubmit={(e) => {
         e.preventDefault()

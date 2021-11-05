@@ -39,7 +39,7 @@ function EditComment() {
   }
 
   return (
-    <div>
+    <div className='edit-comment-container'>
       <p>Edit Comment</p>
       <form onSubmit={(e) => {
         e.preventDefault()
