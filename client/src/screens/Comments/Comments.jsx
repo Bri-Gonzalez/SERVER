@@ -10,7 +10,7 @@ import {getOnePost} from '../../services/posts'
 import { postComment } from '../../services/comments'
 
 function Comments(props) {
-  const { post_id } = useParams()
+  const { post_id, id } = useParams()
   const [post, setPost] = useState([])
   const [isCreated, setCreated] = useState(false)
   const [formData, setFormData] = useState({
@@ -75,7 +75,7 @@ function Comments(props) {
             <div>
               {props.currentUser?.id === comment.user_id && (
                 <>
-                  <Link to={`/edit-comment/${comment.id}`}><EditIcon /></Link>
+                  <Link to={`/server/${id}/posts/${post_id}/${comment.id}/edit`}><EditIcon /></Link>
                   <DeleteOutlineIcon />
                 </>
               )}

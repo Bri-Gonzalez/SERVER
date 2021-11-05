@@ -17,6 +17,7 @@ import Home from './screens/Home/Home'
 import CreatePost from './screens/CreatePost/CreatePost'
 import EditServer from './screens/EditServer/EditServer'
 import EditPost from './screens/EditPost/EditPost'
+import EditComment from './screens/EditComment/EditComment'
 
 
 function App() {
@@ -70,6 +71,9 @@ function App() {
           </Route>
           <Route path='/server/create'>
             <CreateServer/>
+          </Route>
+          <Route path='/server/:id/posts/:post_id/:id/edit'>
+            <EditComment/>
           </Route>
           <Route path='/server/:id/posts/:post_id'>
             <Comments currentUser={currentUser}/>
