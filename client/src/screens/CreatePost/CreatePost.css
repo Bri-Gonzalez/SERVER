@@ -1,7 +1,7 @@
 .create-post-container {
   color: #7BFDF8;
   font-family: 'Fira Sans', sans-serif;
-  margin-top: 100px;
+  margin-top: 70px;
 }
 
 .create-post-container form {
@@ -19,6 +19,7 @@
 
 .create-post-container p {
   font-size: 20px;
+  padding-top: 30px;
 }
 
 .create-post-container label {

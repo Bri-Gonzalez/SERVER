@@ -113,7 +113,7 @@ function Layout(props) {
           </List>
         </Drawer>
       </Box>
-      <div>{props.children}</div>
+      <div className='children'>{props.children}</div>
       <Footer />
     </div>
   )

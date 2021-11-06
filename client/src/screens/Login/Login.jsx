@@ -20,7 +20,9 @@ function Login(props) {
 
   return (
     <div className='login-container'>
-      <p className='login-title'>Welcome Back!</p>
+      <div className='login-title'>
+        <p>Welcome Back!</p>
+      </div>
       <form
         onSubmit={(e) => {
           e.preventDefault()

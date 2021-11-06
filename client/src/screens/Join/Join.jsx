@@ -1,16 +1,16 @@
 import './Join.css'
 import { useState } from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 function Join(props) {
   const [formData, setFormData] = useState({
     username: '',
     email: '',
     password: '',
-    passwordConfirmation: ''
+    passwordConfirmation: '',
   })
 
-  const {username, email, password, passwordConfirmation} = formData
+  const { username, email, password, passwordConfirmation } = formData
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -21,8 +21,10 @@ function Join(props) {
   }
 
   return (
-    <div className="join-container">
-      <p className='join-title'>Create An Account</p>
+    <div className='join-container'>
+      <div className='join-title'>
+        <p>Create An Account</p>
+      </div>
       <form
         onSubmit={(e) => {
           e.preventDefault()
@@ -74,10 +76,16 @@ function Join(props) {
           <br />
           Confirm Password
         </label>
-        {password !== passwordConfirmation ? <p className='password-check'>Password doesn't match</p> : ''}
+        {password !== passwordConfirmation ? (
+          <p className='password-check'>Password doesn't match</p>
+        ) : (
+          ''
+        )}
         <button>Join</button>
       </form>
-      <p className='already-joined'>Already apart of SERVR? <Link to='/login'>LOG IN</Link></p>
+      <p className='already-joined'>
+        Already apart of SERVR? <Link to='/login'>LOG IN</Link>
+      </p>
     </div>
   )
 }

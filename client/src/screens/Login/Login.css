@@ -1,11 +1,12 @@
 .login-container {
   font-family: 'Fira Sans', sans-serif;
-  margin: 100px 0 50px 0;
+  margin: 70px 0 50px 0;
 }
 
-.login-title {
+.login-title p {
   color: #7BFDF8;
   font-size: 20px;
+  padding-top: 30px;
 }
 
 .login-container form {

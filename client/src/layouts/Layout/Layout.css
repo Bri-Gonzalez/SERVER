@@ -35,3 +35,7 @@
   flex-direction: column;
   margin-left: 20px;
 }
+
+.children {
+  min-height: 600px;
+}

@@ -1,11 +1,12 @@
 .join-container {
   font-family: 'Fira Sans', sans-serif;
-  margin: 100px 0 50px 0;
+  margin: 70px 0 50px 0;
 }
 
-.join-title {
+.join-title p {
   color: #7BFDF8;
   font-size: 20px;
+  padding-top: 30px;
 }
 
 .join-container form {

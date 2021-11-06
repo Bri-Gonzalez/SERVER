@@ -91,3 +91,53 @@
 .carousel-title {
   font-size: 19px;
 }
+
+@media screen and (max-width: 800px) {
+  .call-to-action {
+    font-size: 2.2vw;
+    left: 30px;
+  }
+  
+  .call-to-action button {
+    font-size: 2vw;
+    padding: 10px;
+  }
+
+  .carousel {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .header-container img {
+    display: none;
+  }
+
+  .call-to-action {
+    background-color: #b8b4ee30;
+    border: 2px solid #F3BAFE;
+    color: #7BFDF8;
+    font-size: 5vw;
+    height: 70%;
+    left: 0;
+    letter-spacing: 1px;
+    height: 300px;
+    margin-top: 50px;
+    position: relative;
+    top: 0;
+    width: 80%;
+  }
+
+  .call-to-action button {
+    font-size: 4vw;
+    padding: 15px;
+  }
+
+
+} 
