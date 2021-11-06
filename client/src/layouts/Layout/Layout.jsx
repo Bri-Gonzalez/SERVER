@@ -81,6 +81,7 @@ function Layout(props) {
           variant='persistent'
           anchor='right'
           open={open}
+          onClick={handleDrawerClose}
         >
           <DrawerHeader>
             <IconButton onClick={handleDrawerClose}>
