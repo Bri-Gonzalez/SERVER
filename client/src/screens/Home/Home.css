@@ -53,6 +53,8 @@
   border-color: #F3BAFE;
   color: #F3BAFE;
   cursor: pointer;
+  transform: scale(1.005);
+  transition-duration: 0.55s;
 }
 
 .carousel-container {

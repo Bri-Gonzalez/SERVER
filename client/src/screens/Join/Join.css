@@ -1,5 +1,6 @@
 .join-container {
-  margin-top: 100px;
+  font-family: 'Fira Sans', sans-serif;
+  margin: 100px 0 50px 0;
 }
 
 .join-title {
@@ -22,7 +23,7 @@
   border-top-style: hidden;
   border-bottom: 2px solid #7BFDF8;
   color: #7BFDF8;
-  margin: 20px 0 5px 0;
+  margin: 25px 0 5px 0;
   width: 50vw;
 }
 
@@ -32,9 +33,14 @@
   outline: 2px solid #2A374A;
 }
 
+.join-container input:-webkit-autofill{
+  -webkit-box-shadow: 0 0 0 30px #232e3e inset;
+  -webkit-text-fill-color: #7BFDF8;
+}
+
 .join-container label {
   color: #7BFDF8;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .password-check {
@@ -47,8 +53,18 @@
   border-radius: 5px;
   color: #7BFDF8;
   font-size: 15px;
+  margin: 30px 0 20px 0;
   padding: 5px;
   width: 50vw;
+  transition: 350ms;
+}
+
+.join-container button:hover {
+  border-color: #F3BAFE; 
+  color: #F3BAFE;
+  cursor: pointer;
+  transform: scale(1.005);
+  transition-duration: 0.55s;
 }
 
 .already-joined, .already-joined a {
@@ -58,4 +74,10 @@
 .already-joined a {
   font-weight: bold;
   text-decoration: none;
+  transition: 350ms;
+}
+
+.already-joined a:hover {
+  color: #F3BAFE;
+  cursor: pointer;
 }

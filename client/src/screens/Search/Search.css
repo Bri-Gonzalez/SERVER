@@ -39,6 +39,11 @@
   outline: 2px solid #2A374A;
 }
 
+.search-bar input:-webkit-autofill{
+  -webkit-box-shadow: 0 0 0 30px #232e3e inset;
+  -webkit-text-fill-color: #7BFDF8;
+}
+
 .not-exist-question {
   color: #7BFDF8;
   font-family: 'Fira Sans', sans-serif;
@@ -47,6 +52,7 @@
 
 .not-exist-question a {
   color: #7BFDF8;
+  font-weight: bold;
   text-decoration: none;
   transition: 350ms;
 }
