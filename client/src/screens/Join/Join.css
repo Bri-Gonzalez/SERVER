@@ -84,6 +84,11 @@
   cursor: pointer;
 }
 
+.join-container input:-webkit-autofill{
+  -webkit-box-shadow: 0 0 0 30px #232e3e inset;
+  -webkit-text-fill-color: #7BFDF8;
+}
+
 
 @media screen and (max-width: 900px) {
   .join-container input, .join-container button {

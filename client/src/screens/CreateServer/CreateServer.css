@@ -1,3 +1,78 @@
 .create-server-container {
-  margin-top: 70px;
+  font-family: 'Fira Sans', sans-serif;
+  margin: 70px;
+}
+
+.create-server-container p {
+  color: #7BFDF8;
+  font-size: 20px;
+  padding-top: 30px;
+}
+
+.create-server-container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.create-server-container input {
+  background-color: transparent;
+  border-left: 2px solid #2A374A;
+  border-right: 2px solid #2A374A;
+  border-top: 2px solid #2A374A;
+  border-bottom: 2px solid #7BFDF8;
+  color: #7BFDF8;
+  height: 30px;
+  margin: 10px 0 5px 0;
+  width: 50vw;
+}
+
+
+.create-server-container input:focus {
+  background-color: #232e3e;
+  border: none;
+  outline: 2px solid #2A374A;
+}
+
+.create-server-container input:active {
+  color: #7BFDF8;
+}
+
+.create-server-container label {
+  color: #7BFDF8;
+  font-size: 15px;
+}
+
+.create-server-container button {
+  background-color: transparent;
+  border: 2px solid #7BFDF8;
+  border-radius: 5px;
+  color: #7BFDF8;
+  font-size: 15px;
+  margin-top: 15px;
+  padding: 5px;
+  width: 50vw;
+  transition: 350ms;
+}
+
+.create-server-container button:hover {
+  border-color: #F3BAFE; 
+  color: #F3BAFE;
+  cursor: pointer;
+  transform: scale(1.005);
+  transition-duration: 0.55s;
+}
+
+.create-server-container input:-webkit-autofill{
+  -webkit-box-shadow: 0 0 0 30px #232e3e inset;
+  -webkit-text-fill-color: #7BFDF8;
+}
+
+@media screen and (max-width: 900px) {
+  .create-server-container input, 
+  .create-server-container button {
+    width: 70vw;
+  }
 }
