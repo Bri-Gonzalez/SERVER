@@ -76,7 +76,13 @@
 }
 
 .post img {
+  border-radius: 5px;
   max-width: 70%;
+}
+
+.post-text {
+  font-size: 15px;
+  margin-top: 20px;
 }
 
 .post a, .post button {

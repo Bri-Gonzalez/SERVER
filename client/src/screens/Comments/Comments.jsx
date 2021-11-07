@@ -7,7 +7,11 @@ import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline'
 import AddIcon from '@mui/icons-material/Add'
 
 import { getOnePost } from '../../services/posts'
-import { postComment, deleteComment, getAllComments } from '../../services/comments'
+import {
+  postComment,
+  deleteComment,
+  getAllComments,
+} from '../../services/comments'
 
 function Comments(props) {
   const { post_id, id } = useParams()
@@ -16,7 +20,7 @@ function Comments(props) {
   const [isCreated, setCreated] = useState(false)
   const [formData, setFormData] = useState({
     text: '',
-    post_id: Number(post_id)
+    post_id: Number(post_id),
   })
 
   const { text } = formData
@@ -32,7 +36,9 @@ function Comments(props) {
   useEffect(() => {
     const fetchComments = async () => {
       const commentList = await getAllComments()
-      const postComments = commentList.filter((post) => post.post_id === Number(post_id))
+      const postComments = commentList.filter(
+        (post) => post.post_id === Number(post_id)
+      )
       setComments(postComments)
     }
     fetchComments()
@@ -45,7 +51,7 @@ function Comments(props) {
       [name]: value,
     }))
   }
-  
+
   const handleCreateComment = async (formData) => {
     const commentData = await postComment(formData)
     setCreated(commentData)
@@ -58,45 +64,69 @@ function Comments(props) {
 
   return (
     <div className='comments-pg-container'>
-      <div>
-        <p>{post?.user?.username}</p>
-        <p>{post.title}</p>
-        {post.image ? <img src={post.image} alt={post.title} /> : ''}
-        {post.text ? <p>{post.text}</p> : ''}
-      </div>
-      <div>
-        <form onSubmit={(e) => {
-          e.preventDefault()
-          handleCreateComment(formData)
-        }}>
-          <textarea
-            autoFocus
-            required
-            type='text'
-            name='text'
-            value={text}
-            placeholder='Add a comment'
-            onChange={handleChange}
-          />
-          <br/ >
-          <button><AddIcon/> add comment</button>
-        </form>
-      </div>
-      <div>
-        {comments.map((comment) => (
-          <div key={comment.id}>
-            <p>{comment.user.username}</p>
-            <p>{comment.text}</p>
-            <div>
-              {props.currentUser?.id === comment.user_id && (
-                <>
-                  <Link to={`/server/${id}/posts/${post_id}/${comment.id}/edit`}><EditIcon /></Link>
-                  <button onClick={() => handleDeleteComment(comment.id)}><DeleteOutlineIcon /></button>
-                </>
+      <div className='post-details-container'>
+        <div className='post-details'>
+          <p className='post-username'>{post?.user?.username}</p>
+          <p className='post-title'>{post.title}</p>
+          {post.image ? <img src={post.image} alt={post.title} /> : ''}
+          {post.text ? <p className='post-text'>{post.text}</p> : ''}
+        </div>
+        <div className='comment-form'>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault()
+              handleCreateComment(formData)
+            }}
+          >
+            <textarea
+              autoFocus
+              required
+              type='text'
+              name='text'
+              value={text}
+              placeholder='Add a comment'
+              onChange={handleChange}
+            />
+            <br />
+            <div className='comment-btn'>
+              {props.currentUser ? (
+                <button>
+                  <AddIcon style={{ fontSize: 18 }} /> &nbsp; add comment
+                </button>
+              ) : (
+                <Link to='/login'>
+                  <button>
+                    <AddIcon style={{ fontSize: 18 }} /> &nbsp; add comment
+                  </button>
+                </Link>
               )}
             </div>
-          </div>
-        ))}
+          </form>
+        </div>
+        <div className='comments-container'>
+          {comments.map((comment) => (
+            <div key={comment.id} className='comment-container'>
+              <p className='comment-username'>{comment.user.username}</p>
+              <div className='comment-inline'>
+                <p className='comment-text'>{comment.text}</p>
+                <div className='comment-edit-delete'>
+                  {props.currentUser?.id === comment.user_id && (
+                    <>
+                      <Link
+                        to={`/server/${id}/posts/${post_id}/${comment.id}/edit`}
+                      >
+                        <EditIcon style={{ fontSize: 18 }} />
+                      </Link>
+                      <button onClick={() => handleDeleteComment(comment.id)}>
+                        <DeleteOutlineIcon style={{ fontSize: 18 }} />
+                      </button>
+                    </>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   )

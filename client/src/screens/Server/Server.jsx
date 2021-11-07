@@ -57,7 +57,7 @@ function Server(props) {
             <p className='post-username'>{post.user.username}</p>
             <p className='post-title'>{post.title}</p>
             {post.image ? <img src={post.image} alt={post.title} /> : ''}
-            {post.text ? <p>{post.text}</p> : ''}
+            {post.text ? <p className='post-text'>{post.text}</p> : ''}
             <Link to={`/server/${server.id}/posts/${post.id}`}>
               <p className='post-comments'><ChatBubbleOutlineIcon/> &nbsp; {post.comments.length} Comments</p>
             </Link>
