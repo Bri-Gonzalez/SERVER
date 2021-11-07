@@ -19,12 +19,13 @@
 
 .join-container input {
   background-color: transparent;
-  border-left-style: hidden;
-  border-right-style: hidden;
-  border-top-style: hidden;
+  border-left: 2px solid #2A374A;
+  border-right: 2px solid #2A374A;
+  border-top: 2px solid #2A374A;
   border-bottom: 2px solid #7BFDF8;
   color: #7BFDF8;
-  margin: 25px 0 5px 0;
+  height: 30px;
+  margin: 10px 0 5px 0;
   width: 50vw;
 }
 
@@ -54,7 +55,7 @@
   border-radius: 5px;
   color: #7BFDF8;
   font-size: 15px;
-  margin: 30px 0 20px 0;
+  margin: 35px 0 20px 0;
   padding: 5px;
   width: 50vw;
   transition: 350ms;
@@ -82,3 +83,11 @@
   color: #F3BAFE;
   cursor: pointer;
 }
+
+
+@media screen and (max-width: 900px) {
+  .join-container input, .join-container button {
+    width: 70vw;
+  }
+}
+

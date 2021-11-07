@@ -65,22 +65,6 @@ function Join(props) {
           <br />
           Password
         </label>
-        <label>
-          <input
-            required
-            type='password'
-            name='passwordConfirmation'
-            value={passwordConfirmation}
-            onChange={handleChange}
-          />
-          <br />
-          Confirm Password
-        </label>
-        {password !== passwordConfirmation ? (
-          <p className='password-check'>Password doesn't match</p>
-        ) : (
-          ''
-        )}
         <button>Join</button>
       </form>
       <p className='already-joined'>
