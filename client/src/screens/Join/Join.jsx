@@ -6,11 +6,10 @@ function Join(props) {
   const [formData, setFormData] = useState({
     username: '',
     email: '',
-    password: '',
-    passwordConfirmation: '',
+    password: ''
   })
 
-  const { username, email, password, passwordConfirmation } = formData
+  const { username, email, password } = formData
 
   const handleChange = (e) => {
     const { name, value } = e.target

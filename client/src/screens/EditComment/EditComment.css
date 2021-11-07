@@ -1,3 +1,67 @@
 .edit-comment-container {
+  color: #7BFDF8;
+  font-family: 'Fira Sans', sans-serif;
   margin-top: 70px;
+}
+
+.edit-comment-container p {
+  font-size: 20px;
+  padding-top: 30px;
+}
+
+.edit-comment-container form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.edit-comment-container textarea {
+  background-color: transparent;
+  border: 2px solid #7BFDF8;
+  border-radius: 5px;
+  color: #7BFDF8;
+  height: 100px;
+  margin: 10px;
+  max-width: 600px;
+  width: 50vw;
+}
+
+.edit-comment-container ::placeholder {
+  color: #7BFDF8;
+  padding: 5px 0 0 10px;
+}
+
+.edit-comment-container textarea:focus {
+  background-color: #232e3e;
+  border: none;
+  outline: 2px solid #2A374A;
+}
+
+.edit-comment-container button {
+  background-color: transparent;
+  border: 2px solid #7BFDF8;
+  border-radius: 5px;
+  color: #7BFDF8;
+  font-size: 15px;
+  max-width: 600px;
+  padding: 8px;
+  transition: 350ms;
+  width: 50vw;
+}
+
+.edit-comment-container button:hover {
+  border-color: #F3BAFE; 
+  color: #F3BAFE;
+  cursor: pointer;
+  transform: scale(1.005);
+  transition-duration: 0.55s;
+}
+
+@media screen and (max-width: 900px) {
+  .edit-comment-container textarea, 
+  .edit-comment-container button {
+    width: 70vw;
+  }
 }

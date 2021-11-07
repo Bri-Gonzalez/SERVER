@@ -35,6 +35,7 @@
   color: #7BFDF8;
   height: 30px;
   margin: 10px 0 5px 0;
+  max-width: 600px;
   width: 50vw;
 }
 
@@ -55,6 +56,7 @@
   border-radius: 5px;
   color: #7BFDF8;
   height: 100px;
+  max-width: 600px;
   width: 50vw;
 }
 
@@ -73,6 +75,7 @@
   border-radius: 5px;
   color: #7BFDF8;
   font-size: 15px;
+  max-width: 600px;
   padding: 8px;
   transition: 350ms;
   width: 50vw;
