@@ -1,7 +1,7 @@
 import './App.css'
 
 import { useState, useEffect } from 'react'
-import { Switch, Route, useHistory } from 'react-router-dom'
+import { Switch, Route, useHistory} from 'react-router-dom'
 
 import Layout from './layouts/Layout/Layout'
 import Join from './screens/Join/Join'
@@ -53,6 +53,7 @@ function App() {
     setCurrentUser(null)
     localStorage.removeItem('authToken')
     removeToken()
+    history.push('/')
   }
 
   return (

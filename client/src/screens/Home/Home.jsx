@@ -1,11 +1,12 @@
 import './Home.css'
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import Carousel from 'react-material-ui-carousel'
 import { getAllPosts } from '../../services/posts'
 
 function Home() {
   const [posts, setPosts] = useState([])
+  const { id } = useParams()
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -40,7 +41,7 @@ function Home() {
             }}>
             {posts.map((post) => (
               <div key={post.id} className='carousel-posts'>
-                <Link to={`/posts/${post.id}`}>
+                <Link to={`/server/${id}/posts/${post.id}`}>
                   <div>
                     <p className='carousel-username'>{post.user.username}</p>
                     <p className='carousel-title'>{post.title}</p>
