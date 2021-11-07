@@ -5,10 +5,10 @@
 }
 
 .create-post-container form {
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   text-align: left;
 }
 
@@ -28,16 +28,22 @@
 
 .create-post-container input {
   background-color: transparent;
-  border-left-style: hidden;
-  border-right-style: hidden;
-  border-top-style: hidden;
+  border-left: 2px solid #2A374A;
+  border-right: 2px solid #2A374A;
+  border-top: 2px solid #2A374A;
   border-bottom: 2px solid #7BFDF8;
   color: #7BFDF8;
-  margin: 20px 0 5px 0;
+  height: 30px;
+  margin: 10px 0 5px 0;
   width: 50vw;
 }
 
-.create-post-container input:focus {
+.create-post-container input:active {
+  color: #7BFDF8;
+}
+
+.create-post-container input:focus,
+.create-post-container textarea:focus {
   background-color: #232e3e;
   border: none;
   outline: 2px solid #2A374A;
@@ -61,13 +67,15 @@
   display: none;
 }
 
-.file-label {
-  transition: 350ms;
-}
-
 .file-div {
   margin: 10px;
   width: 50vw;
+}
+
+.file-label {
+  align-items: center;
+  display: flex;
+  transition: 350ms;
 }
 
 .file-label:hover {
@@ -91,4 +99,15 @@
   border-color: #F3BAFE;
   color: #F3BAFE;
   cursor: pointer;
+  transform: scale(1.005);
+  transition-duration: 0.55s;
+}
+
+@media screen and (max-width: 900px) {
+  .create-post-container input,
+  .create-post-container textarea, 
+  .create-post-container button,
+  .file-div {
+    width: 70vw;
+  }
 }

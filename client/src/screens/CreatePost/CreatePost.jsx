@@ -82,7 +82,7 @@ function CreatePost(props) {
           <label className='file-label'>
             <input type='file' name='file' onChange={uploadImage} />
             <br />
-            <PanoramaIcon /> Upload Image
+            <PanoramaIcon/> &nbsp; Upload Image
           </label>
         </div>
         <br />

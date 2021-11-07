@@ -52,8 +52,8 @@
   font-size: 15px;
   margin-top: 15px;
   padding: 5px;
-  width: 50vw;
   transition: 350ms;
+  width: 50vw;
 }
 
 .edit-server-container button:hover {
