@@ -24,6 +24,7 @@
 .search-bar input {
   background-color: transparent;
   border: none;
+  color: #7BFDF8;
   font-family: 'Fira Sans', sans-serif;
   font-size: 17px;
   width: 80%
@@ -87,4 +88,6 @@
   border-color: #F3BAFE;
   color: #F3BAFE;
   cursor: pointer;
+  transform: scale(1.005);
+  transition-duration: 0.55s;
 }
