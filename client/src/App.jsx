@@ -35,11 +35,10 @@ function App() {
 
   const handleLogin = async (formData) => {
     const userData = await loginUser(formData)
-    // if (userData) {
-      // setIsNotValid(false)
+    if (userData) {
       setCurrentUser(userData)
       history.push('/')
-    // }
+    } 
     // setIsNotValid(true)
   }
 
