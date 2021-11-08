@@ -50,6 +50,10 @@
   transform: scale(1.005);
 }
 
+.create-post-btn a {
+  text-decoration: none;
+}
+
 .post-container {
   max-width: 600px;
   width: 70%;
