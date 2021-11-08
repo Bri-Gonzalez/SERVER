@@ -19,6 +19,8 @@
 
 _**SERVR** is a collection of forums where gamers can converse, share, and collaborate together through different video game related servers._
 
+[Deployed Site]()
+
 <br>
 
 ## MVP
@@ -209,6 +211,7 @@ src
 
 ## Post-MVP
 
+- _Form Error handeling_
 - _Users will be able to like comments and posts_
 - _Timestamps to posts and comments_
 - _User avatars next to username_
