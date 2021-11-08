@@ -39,5 +39,5 @@
 }
 
 .children {
-  height: 90vh;
+  min-height: 650px;
 }
