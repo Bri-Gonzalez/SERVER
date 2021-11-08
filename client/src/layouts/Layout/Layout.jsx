@@ -60,7 +60,7 @@ function Layout(props) {
   }
 
   return (
-    <div>
+    <div className='layout-container'>
       <Box sx={{ display: 'flex' }}>
         <AppBar position='fixed' open={open}>
           <Nav
