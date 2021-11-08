@@ -61,11 +61,48 @@ _The **SERVR** MVP will allow a user to explore a variety of different video gam
 
 [Figma Wireframes](https://www.figma.com/file/1duXVVpHdZlsy3maTSeN1N/Server?node-id=0%3A1)
 
+Desktop Home
+![Desktop Home](https://res.cloudinary.com/dfryxohde/image/upload/v1636326768/Server/HomeLanding_ci7uve.png)
+
+Mobile Home
+![Mobile Home](https://res.cloudinary.com/dfryxohde/image/upload/v1636326766/Server/MobileLanding_ripsim.png)
+
+Create Account 
+![Create Account](https://res.cloudinary.com/dfryxohde/image/upload/v1636326767/Server/CreateAccount_vitzd2.png)
+
+Login
+![Login](https://res.cloudinary.com/dfryxohde/image/upload/v1636326766/Server/Login_khd1uc.png)
+
+Search Server
+![Search Server](https://res.cloudinary.com/dfryxohde/image/upload/v1636326766/Server/Search_zuoucv.png)
+
+Create Server
+![Create Server](https://res.cloudinary.com/dfryxohde/image/upload/v1636326766/Server/CreateServer_ti7dgw.png)
+
+Server
+![Server](https://res.cloudinary.com/dfryxohde/image/upload/v1636326766/Server/Server_kfmi4z.png)
+
+Edit Server
+![Edit Server](https://res.cloudinary.com/dfryxohde/image/upload/v1636326768/Server/EditServer_xr5zns.png)
+
+Create Post
+![Create Post](https://res.cloudinary.com/dfryxohde/image/upload/v1636326766/Server/CreatePost_jhtj8f.png)
+
+Edit Post
+![Edit Post](https://res.cloudinary.com/dfryxohde/image/upload/v1636326768/Server/EditPost_pfmy3v.png)
+
+Post Details
+![Post Details](https://res.cloudinary.com/dfryxohde/image/upload/v1636326768/Server/PostDetails_ix0sh4.png)
+
+Edit Comment
+![Edit Comment](https://res.cloudinary.com/dfryxohde/image/upload/v1636326768/Server/EditComment_eehzim.png)
+
+
 #### Component Tree
 
 [Component Tree](https://whimsical.com/server-PkfKKuwW5eojFuaNYCLNZJ)
 
-![Component Tree](https://res.cloudinary.com/dfryxohde/image/upload/v1635823222/Server/server_component_tree_vugdpb.png)
+![Component Tree](https://res.cloudinary.com/dfryxohde/image/upload/v1636327533/Server/component_tree_hrd87d.png)
 
 #### Component Architecture
 

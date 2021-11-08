@@ -11,6 +11,8 @@
 .user-links-drawer a, 
 .user-links-drawer button, 
 .non-user-links-drawer a {
+  align-items: center;
+  display: flex;
   margin: 5px 0;
 }
 

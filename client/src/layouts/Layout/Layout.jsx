@@ -101,14 +101,14 @@ function Layout(props) {
           <List>
             {props.currentUser ? (
               <div className='user-links-drawer'>
-                <NavLink to='/server/search'><SearchIcon style={{ fontSize: 30 }}/>Search</NavLink>
-                <button onClick={props.handleLogout}><LogoutIcon style={{ fontSize: 30 }}/>Logout</button>
+                <NavLink to='/server/search'><SearchIcon style={{ fontSize: 30 }}/> &nbsp; Search</NavLink>
+                <button onClick={props.handleLogout}><LogoutIcon style={{ fontSize: 30 }}/> &nbsp; Logout</button>
               </div>
             ) : (
               <div className='non-user-links-drawer'>
-                <NavLink to='/server/search'><SearchIcon style={{ fontSize: 30 }}/> Search</NavLink>
-                <NavLink to='/join'><PersonAddIcon style={{ fontSize: 30 }}/>Join</NavLink>
-                <NavLink to='/login'><LoginIcon style={{ fontSize: 30 }}/>Login</NavLink>
+                <NavLink to='/server/search'><SearchIcon style={{ fontSize: 30 }}/> &nbsp; Search</NavLink>
+                <NavLink to='/join'><PersonAddIcon style={{ fontSize: 30 }}/> &nbsp; Join</NavLink>
+                <NavLink to='/login'><LoginIcon style={{ fontSize: 30 }}/> &nbsp; Login</NavLink>
               </div>
             )}
           </List>
