@@ -25,6 +25,7 @@ User.destroy_all
 @islandlife = User.create!(username: 'islandlife4life', email: 'islandlife4life@email.com', password: '38djfjeis9e')
 @timmy = User.create!(username: 'timmy_nook', email: 'timmynook@email.com', password: 'd7eu3rhfu3')
 @tommy = User.create!(username: 'tommy_nook', email: 'tommynook@email.com', password: 'nook39rjfnsk')
+@briana = User.create!(username: 'bri_gonzalez', email: 'brigonzalez@gmail.com', password: 'briana123456')
 
 puts "#{User.count} users created!"
 
@@ -77,6 +78,14 @@ puts "#{Server.count} servers created!"
   image: 'https://res.cloudinary.com/dfryxohde/image/upload/v1636338979/Server/xa0aahgecxa51_zxtpok.jpg',
   server: @animalcrossing,
   user: @isabelle
+)
+
+@darksouls3post1 = Post.create!(
+  title: "What’s everyone’s favorite boss ost?",
+  text: 'Mine is Friede!',
+  image: 'https://res.cloudinary.com/dfryxohde/image/upload/v1636387215/Server/friede_jltp8e.jpg',
+  server: @darksouls3,
+  user: @briana
 )
 
 puts "#{Post.count} posts created!"
