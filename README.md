@@ -64,9 +64,6 @@ _The **SERVR** MVP will allow a user to explore a variety of different video gam
 Desktop Home
 ![Desktop Home](https://res.cloudinary.com/dfryxohde/image/upload/v1636326768/Server/HomeLanding_ci7uve.png)
 
-Mobile Home
-![Mobile Home](https://res.cloudinary.com/dfryxohde/image/upload/v1636326766/Server/MobileLanding_ripsim.png)
-
 Create Account 
 ![Create Account](https://res.cloudinary.com/dfryxohde/image/upload/v1636326767/Server/CreateAccount_vitzd2.png)
 
@@ -80,7 +77,7 @@ Create Server
 ![Create Server](https://res.cloudinary.com/dfryxohde/image/upload/v1636326766/Server/CreateServer_ti7dgw.png)
 
 Server
-![Server](https://res.cloudinary.com/dfryxohde/image/upload/v1636326766/Server/Server_kfmi4z.png)
+![Server](https://res.cloudinary.com/dfryxohde/image/upload/v1636336171/Server/Server_p9r2u6.jpg)
 
 Edit Server
 ![Edit Server](https://res.cloudinary.com/dfryxohde/image/upload/v1636326768/Server/EditServer_xr5zns.png)
@@ -172,35 +169,32 @@ src
 
 | Task                            | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------------------- | :------: | :------------: | :-----------: | :---------: |
-| Back End Authentication         |    H     |     3 hrs      |     -     |    -    |
-| Back End Database               |    H     |     3 hrs      |     -     |    -    |
-| Seed and Create Data            |    H     |     2 hrs      |     -     |    -    |
-| Test Back End Routes            |    H     |     1 hrs      |     -     |    -    |
-| React File Structure            |    H     |     2 hrs      |     -     |    -    |
-| Front End Authentication        |    H     |     3 hrs      |     -     |    -    |
-| Front End Routes and Testing    |    H     |     3 hrs      |     -     |    -    |
-| Layout Setup                    |    H     |     1 hrs      |     -     |    -    |
-| Navbar                          |    H     |     1 hrs      |     -     |    -    |
-| Footer                          |    H     |     1 hrs      |     -     |    -    |
-| Home Screen                     |    H     |     2 hrs      |     -     |    -    |
-| Search Screen                   |    H     |     1 hrs      |     -     |    -    |
-| Get and Edit Servers            |    H     |     2 hrs      |     -     |    -    |
-| Get, Edit, and Delete Posts     |    H     |     2 hrs      |     -     |    -    |
-| Get, Edit, and Delete Comments  |    H     |     2 hrs      |     -     |    -    |
-| Hamburger on Nav (tablet/mobile)|    H     |     2 hrs      |     -     |    -    |
-| Join Screen CSS                 |    H     |     2 hrs      |     -     |    -    |
-| Login Screen CSS                |    H     |     2 hrs      |     -     |    -    |
-| Home Screen CSS                 |    H     |     2 hrs      |     -     |    -    |
-| Search Screen CSS               |    H     |     2 hrs      |     -     |    -    |
-| Server Screen CSS               |    H     |     2 hrs      |     -     |    -    |
-| Create Post Screen CSS          |    H     |     2 hrs      |     -     |    -    |
-| Edit Post Screen CSS            |    H     |     1 hrs      |     -     |    -    |
-| Comments Screen CSS             |    H     |     2 hrs      |     -     |    -    |
-| Carousel on Home Screen         |    M     |     3 hrs      |     -     |    -    |
-| Modal - Create and Edit Server  |    M     |     2 hrs      |     -     |    -    |
-| Modal - Edit Comment            |    M     |     2 hrs      |     -     |    -    |
-| CSS for Modals                  |    H     |     2 hrs      |     -     |    -    |
-| TOTAL                           |          |     53 hrs     |     -     |     -   |
+| Back End Authentication         |    H     |     3 hrs      |     1.5hrs    |    1.5hrs   |
+| Back End Database               |    H     |     3 hrs      |     2hrs      |    2hrs     |
+| Seed and Create Data            |    H     |     2 hrs      |     1hr       |    1hr      |
+| Test Back End Routes            |    H     |     1 hrs      |     1.5hrs    |    1.5hrs   |
+| React File Structure            |    H     |     2 hrs      |     .5hrs     |    .5hrs    |
+| Front End Authentication        |    H     |     3 hrs      |     1.5hrs    |    1.5hrs   |
+| Front End Routes and Testing    |    H     |     3 hrs      |     5hrs      |    5hrs     |
+| Layout Setup                    |    H     |     1 hrs      |     1hr       |    1hr      |
+| Navbar                          |    H     |     1 hrs      |     .5hrs     |    .5hrs    |
+| Footer                          |    H     |     1 hrs      |     10mins    |    10mins   |
+| Home Screen                     |    H     |     2 hrs      |     1hr       |    1hr      |
+| Search Screen                   |    H     |     1 hrs      |     1.5hrs    |    1.5hrs   |
+| Get and Edit Servers            |    H     |     2 hrs      |     1hr       |    1hr      |
+| Get, Edit, and Delete Posts     |    H     |     2 hrs      |     4hrs      |    4hrs     |
+| Get, Edit, and Delete Comments  |    H     |     2 hrs      |     5hrs      |    5hrs     |
+| Hamburger on Nav (tablet/mobile)|    H     |     2 hrs      |     1hr       |    1hr      |
+| Join Screen CSS                 |    H     |     2 hrs      |     2hrs      |    2hrs     |
+| Login Screen CSS                |    H     |     2 hrs      |     2hrs      |    2hrs     |
+| Home Screen CSS                 |    H     |     2 hrs      |     2hrs      |    2hrs     |
+| Search Screen CSS               |    H     |     2 hrs      |     2hrs      |    2hrs     |
+| Server Screen CSS               |    H     |     2 hrs      |     1.5hrs    |    1.5hrs   |
+| Create Post Screen CSS          |    H     |     2 hrs      |     1hr       |    1hr      |
+| Edit Post Screen CSS            |    H     |     1 hrs      |     .5hrs     |    .5hrs    |
+| Comments Screen CSS             |    H     |     2 hrs      |     1.5hrs    |    1.5hrs   |
+| Carousel on Home Screen         |    M     |     3 hrs      |     1.5hrs    |    1.5hrs   |
+| TOTAL                           |          |     47 hrs     |  42hrs 10mins |42hrs 10mins |
 
 <br>
 
@@ -236,8 +230,31 @@ This piece of code shows the logic behind connecting a user to their content. It
 ```
 validates :name, presence: true, uniqueness: { case_sensitive: false }
 ```
-This line of code was used in the server model on the back end. The case sensitivity is set to false to prevent multiple servers with the same name from being created (i.e. Bloodborne and bloodborne).
+This line of code was used in the server model on the back end. The case sensitivity is set to false to prevent multiple servers with the same name from being created (i.e. Bloodborne and bloodborne). 
+
+```
+validates :password, length: { minimum: 6 }, confirmation: { case_sensitive: false }
+```
+This line of code is similar to one above, but for user model on the back end. Case sensitive is also set to false here so that users passwords must match the case they put in when joining. 
 
 ## Code Issues & Resolutions
 
-> Use this section to list of all major issues encountered and their resolution.
+I ran into issues with connecting specific posts and comments with their parent post or server. The solution was to be specific with my use params, setting the id as a number, and making sure my routes matched with the params. Provided is a solution that worked for me when grabing a post to edit:
+
+``` useParams
+const { server_id, id } = useParams()
+```
+``` Setting server_id as a number
+const [formData, setFormData] = useState({
+  title: '',
+  text: '',
+  image: '',
+  server_id: Number(server_id),
+})
+```
+``` Route matching params
+<Route path='/server/:server_id/post/:id/edit'>
+  <EditPost />
+</Route>
+```
+
