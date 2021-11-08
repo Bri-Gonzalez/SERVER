@@ -19,7 +19,7 @@
 
 _**SERVR** is a collection of forums where gamers can converse, share, and collaborate together through different video game related servers._
 
-[Deployed Site]()
+[Deployed Site](https://find-your-server.netlify.app/)
 
 <br>
 
