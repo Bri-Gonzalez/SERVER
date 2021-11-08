@@ -3,16 +3,19 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import SearchIcon from '@mui/icons-material/Search'
 import { getAllServers } from '../../services/servers'
+import PacmanLoader from 'react-spinners/PacmanLoader'
 
 function Search(props) {
   const [searchResult, setSearchResult] = useState([])
   const [servers, setServers] = useState([])
+  const [isLoaded, setLoaded] = useState(false)
 
   useEffect(() => {
     const fetchServers = async () => {
       const serverList = await getAllServers()
       setServers(serverList)
       setSearchResult(serverList)
+      setLoaded(true)
     }
     fetchServers()
   }, [])
@@ -52,15 +55,21 @@ function Search(props) {
           </p>
         )}
       </div>
-      <div className='searched-server-container'>
-        {searchResult.map((server) => (
-          <div key={server.id} className='searched-server'>
-            <Link to={`/server/${server.id}`}>
-              <button>{server.name}</button>
-            </Link>
-          </div>
-        ))}
-      </div>
+      {!isLoaded ? (
+        <div className='search-loader'>
+          <PacmanLoader color= '#7BFDF8'/>
+        </div>
+      ) : (
+        <div className='searched-server-container'>
+          {searchResult.map((server) => (
+            <div key={server.id} className='searched-server'>
+              <Link to={`/server/${server.id}`}>
+                <button>{server.name}</button>
+              </Link>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   )
 }
