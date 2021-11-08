@@ -44,7 +44,7 @@ function Search(props) {
         {props.currentUser ? (
           <p>
             Your Server not exist? Create one{' '}
-            <Link to='/server/create'>HERE</Link>
+            <Link to='/server/create'>HERE.</Link>
           </p>
         ) : (
           <p>
