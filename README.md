@@ -224,7 +224,19 @@ src
 
 ## Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+```
+{props.currentUser?.id === server.user_id && (
+  <Link to={`/server/${server.id}/edit`}>
+    <EditIcon style={{ fontSize: 20 }}/>
+  </Link>
+)}
+```
+This piece of code shows the logic behind connecting a user to their content. It is the logic that makes sure that only the user who created a server, post, or comment, is the only user that can edit or delete that server, post, or comment. This is something I am very grateful for learning how to do during this project.
+
+```
+validates :name, presence: true, uniqueness: { case_sensitive: false }
+```
+This line of code was used in the server model on the back end. The case sensitivity is set to false to prevent multiple servers with the same name from being created (i.e. Bloodborne and bloodborne).
 
 ## Code Issues & Resolutions
 
