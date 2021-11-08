@@ -122,3 +122,9 @@
   text-decoration: none;
   transition: 350ms;
 }
+
+.comment-container a:hover, 
+.comment-container button:hover {
+  color: #7BFDF8;
+  cursor: pointer;
+}
