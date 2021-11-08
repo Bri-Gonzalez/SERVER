@@ -55,7 +55,6 @@
   max-width: 600px;
   padding: 8px;
   width: 50vw;
-  transition: 350ms;
 }
 
 .login-container button:hover {
@@ -63,7 +62,6 @@
   color: #F3BAFE;
   cursor: pointer;
   transform: scale(1.005);
-  transition-duration: 0.55s;
 }
 
 .new-to-link, .new-to-link a {

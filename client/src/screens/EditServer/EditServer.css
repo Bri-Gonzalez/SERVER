@@ -54,7 +54,6 @@
   margin-top: 15px;
   max-width: 600px;
   padding: 5px;
-  transition: 350ms;
   width: 50vw;
 }
 
@@ -63,7 +62,6 @@
   color: #F3BAFE;
   cursor: pointer;
   transform: scale(1.005);
-  transition-duration: 0.55s;
 }
 
 .edit-server-container input:-webkit-autofill{

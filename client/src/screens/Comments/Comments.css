@@ -68,7 +68,6 @@
   margin-bottom: 15px;
   padding: 5px;
   text-decoration: none;
-  transition: 350ms;
   width: 100%;
 }
 
@@ -77,7 +76,6 @@
   color: #F3BAFE;
   cursor: pointer;
   transform: scale(1.005);
-  transition-duration: 0.55s;
 }
 
 .comments-container {
