@@ -71,6 +71,11 @@
   width: 100%;
 }
 
+.comment-btn a {
+  color: #7BFDF8;
+  text-decoration: none;
+}
+
 .comment-form button:hover {
   border-color: #F3BAFE; 
   color: #F3BAFE;
