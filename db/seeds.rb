@@ -21,6 +21,10 @@ User.destroy_all
 @sylvannacrossing = User.create!(username: 'sylvannacrossing', email: 'sylvannacrossing@email.com', password: 'rufletut589')
 @teamwolfgang = User.create!(username: 'teamwolfgang', email: 'teamwolfgang@email.com', password: 'wolf47fheid')
 @celeste = User.create!(username: 'celeste001', email: 'celeste001@email.com', password: 'cel47d9chvi')
+@isabelle = User.create!(username: 'L8yIsabelle', email: 'l8yisabelle@email.com', password: '3748fjb9f8j')
+@islandlife = User.create!(username: 'islandlife4life', email: 'islandlife4life@email.com', password: '38djfjeis9e')
+@timmy = User.create!(username: 'timmy_nook', email: 'timmynook@email.com', password: 'd7eu3rhfu3')
+@tommy = User.create!(username: 'tommy_nook', email: 'tommynook@email.com', password: 'nook39rjfnsk')
 
 puts "#{User.count} users created!"
 
@@ -67,6 +71,14 @@ puts "#{Server.count} servers created!"
   user: @sylvannacrossing
 )
 
+@animalcrossingpost2 = Post.create!(
+  title: "Giving Mom's Items away",
+  text: 'Comment below with your favorite villager. First come, first serve.',
+  image: 'https://res.cloudinary.com/dfryxohde/image/upload/v1636338979/Server/xa0aahgecxa51_zxtpok.jpg',
+  server: @animalcrossing,
+  user: @isabelle
+)
+
 puts "#{Post.count} posts created!"
 
 @bloodbornepost1comment1 = Comment.create!(
@@ -93,16 +105,34 @@ puts "#{Post.count} posts created!"
   user: @godgamer
 )
 
-@animalcrossingcomment1 = Comment.create!(
+@animalcrossingpost1comment1 = Comment.create!(
   text: 'I really want her as a villager too!',
   post: @animalcrossingpost1,
   user: @teamwolfgang
 )
 
-@animalcrossingcomment2 = Comment.create!(
+@animalcrossingpost1comment2 = Comment.create!(
   text: 'i am really looking forward to getting chabwick <3',
   post: @animalcrossingpost1,
   user: @celeste
+)
+
+@animalcrossingpost2comment1 = Comment.create!(
+  text: 'Marshal!',
+  post: @animalcrossingpost2,
+  user: @islandlife
+)
+
+@animalcrossingpost2comment2 = Comment.create!(
+  text: 'Peanut is my fav!',
+  post: @animalcrossingpost2,
+  user: @timmy
+)
+
+@animalcrossingpost2comment3 = Comment.create!(
+  text: 'maple!',
+  post: @animalcrossingpost2,
+  user: @tommy
 )
 
 puts "#{Comment.count} comments created!"
