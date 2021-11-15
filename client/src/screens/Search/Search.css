@@ -63,7 +63,7 @@
   cursor: pointer;
 }
 
-.search-loader {
+.loader {
   align-items: center;
   display: flex;
   justify-content:space-between;

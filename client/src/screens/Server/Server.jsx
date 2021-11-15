@@ -66,7 +66,7 @@ function Server(props) {
         )}
       </div>
       {!isLoaded ? (
-        <div className='search-loader'>
+        <div className='loader'>
           <PacmanLoader color='#7BFDF8' />
         </div>
       ) : (
