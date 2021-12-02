@@ -2,9 +2,10 @@ import './Comments.css'
 import { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 
-import EditIcon from '@mui/icons-material/Edit'
-import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline'
 import AddIcon from '@mui/icons-material/Add'
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline'
+import EditIcon from '@mui/icons-material/Edit'
 import PacmanLoader from 'react-spinners/PacmanLoader'
 
 import { getOnePost } from '../../services/posts'
@@ -69,6 +70,7 @@ function Comments(props) {
     <div className='comments-pg-container'>
       <div className='post-details-container'>
         <div className='post-details'>
+          <Link to={`/server/${id}`}><ArrowBackIcon/></Link>
           <p className='post-username'>{post?.user?.username}</p>
           <p className='post-title'>{post.title}</p>
           {post.image ? <img src={post.image} alt={post.title} /> : ''}
