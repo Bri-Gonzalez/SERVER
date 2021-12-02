@@ -27,7 +27,7 @@
 
 .post-details a {
   color: #7BFDF8;
-  float: left;
+  display: flex;
   text-decoration: none;
   transition: 350ms;
 }
@@ -73,13 +73,12 @@
   border: 2px solid #7BFDF8;
   border-radius: 5px;
   color: #7BFDF8;
-  display: flex;
   font-size: 15px;
-  justify-content: center;
+  letter-spacing: 0.5px;
   margin-bottom: 15px;
-  padding: 5px;
+  padding: 7px;
   text-decoration: none;
-  width: 100%;
+  width: 145px;
 }
 
 .comment-btn a {
