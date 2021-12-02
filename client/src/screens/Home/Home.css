@@ -72,7 +72,7 @@
   width: 70%;
 }
 
-.carousel-posts {
+.carousel-servers {
   display: inline-block;
   width: 70%;
 }
@@ -88,7 +88,7 @@
   cursor: pointer;
 }
 
-.carousel-username {
+.carousel-server-name {
   font-size: 15px;
 }
 

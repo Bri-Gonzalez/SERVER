@@ -3,20 +3,31 @@ import { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import Carousel from 'react-material-ui-carousel'
 import PacmanLoader from 'react-spinners/PacmanLoader'
-import { getAllPosts } from '../../services/posts'
+// import { getAllPosts } from '../../services/posts'
+import { getAllServers } from '../../services/servers'
 
 function Home() {
-  const [posts, setPosts] = useState([])
+  // const [posts, setPosts] = useState([])
+  const [servers, setServers] = useState([])
   const [isLoaded, setLoaded] = useState(false)
   const { id } = useParams()
 
+  // useEffect(() => {
+  //   const fetchPosts = async () => {
+  //     const postList = await getAllPosts()
+  //     setPosts(postList)
+  //     setLoaded(true)
+  //   }
+  //   fetchPosts()
+  // }, [])
+
   useEffect(() => {
-    const fetchPosts = async () => {
-      const postList = await getAllPosts()
-      setPosts(postList)
+    const fetchServers = async () => {
+      const serverList = await getAllServers()
+      setServers(serverList)
       setLoaded(true)
     }
-    fetchPosts()
+    fetchServers()
   }, [])
 
   return (
@@ -56,12 +67,12 @@ function Home() {
                 },
               }}
             >
-              {posts.map((post) => (
-                <div key={post.id} className='carousel-posts'>
-                  <Link to={`/server/${id}/posts/${post.id}`}>
+              {servers.map((server) => (
+                <div key={server.id} className='carousel-servers'>
+                  <Link to={`/server/${id}`}>
                     <div>
-                      <p className='carousel-username'>{post.user.username}</p>
-                      <p className='carousel-title'>{post.title}</p>
+                      <p className='carousel-server-name'>{server.name}</p>
+                      {/* <p className='carousel-title'>{post.title}</p> */}
                     </div>
                   </Link>
                 </div>
