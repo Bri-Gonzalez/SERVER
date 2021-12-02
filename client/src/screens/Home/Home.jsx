@@ -1,26 +1,13 @@
 import './Home.css'
 import { useState, useEffect } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Carousel from 'react-material-ui-carousel'
 import PacmanLoader from 'react-spinners/PacmanLoader'
-// import { getAllPosts } from '../../services/posts'
 import { getAllServers } from '../../services/servers'
-import { flexbox } from '@mui/system'
 
 function Home() {
-  // const [posts, setPosts] = useState([])
   const [servers, setServers] = useState([])
   const [isLoaded, setLoaded] = useState(false)
-  const { id } = useParams()
-
-  // useEffect(() => {
-  //   const fetchPosts = async () => {
-  //     const postList = await getAllPosts()
-  //     setPosts(postList)
-  //     setLoaded(true)
-  //   }
-  //   fetchPosts()
-  // }, [])
 
   useEffect(() => {
     const fetchServers = async () => {
@@ -83,7 +70,6 @@ function Home() {
                   <Link to={`/server/${server.id}`}>
                     <div className='carousel-server-name'>
                       <p>{server.name}</p>
-                      {/* <p className='carousel-title'>{post.title}</p> */}
                     </div>
                   </Link>
                 </div>
