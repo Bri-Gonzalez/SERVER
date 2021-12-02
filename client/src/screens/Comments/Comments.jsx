@@ -2,7 +2,6 @@ import './Comments.css'
 import { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 
-import AddIcon from '@mui/icons-material/Add'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline'
 import EditIcon from '@mui/icons-material/Edit'
@@ -95,14 +94,10 @@ function Comments(props) {
             <br />
             <div className='comment-btn'>
               {props.currentUser ? (
-                <button>
-                  <AddIcon style={{ fontSize: 18 }} /> &nbsp; add comment
-                </button>
+                <button>+ add comment</button>
               ) : (
                 <Link to='/login'>
-                  <button>
-                    <AddIcon style={{ fontSize: 18 }} /> &nbsp; add comment
-                  </button>
+                  <button>+ add comment</button>
                 </Link>
               )}
             </div>

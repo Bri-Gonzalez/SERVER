@@ -43,15 +43,15 @@
   width: 200px;
 }
 
+.create-post-btn a {
+  text-decoration: none;
+}
+
 .create-post-btn button:hover {
   border-color: #F3BAFE; 
   color: #F3BAFE;
   cursor: pointer;
   transform: scale(1.005);
-}
-
-.create-post-btn a {
-  text-decoration: none;
 }
 
 .post-container {
