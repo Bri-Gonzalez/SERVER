@@ -5,6 +5,7 @@ import Carousel from 'react-material-ui-carousel'
 import PacmanLoader from 'react-spinners/PacmanLoader'
 // import { getAllPosts } from '../../services/posts'
 import { getAllServers } from '../../services/servers'
+import { flexbox } from '@mui/system'
 
 function Home() {
   // const [posts, setPosts] = useState([])
@@ -49,12 +50,12 @@ function Home() {
           </Link>
         </div>
       </div>
-        <div className='carousel-container'>
-      {!isLoaded ? (
-        <div className='loader'>
-          <PacmanLoader color='#7BFDF8' />
-        </div>
-      ) : (
+      <div className='carousel-container'>
+        {!isLoaded ? (
+          <div className='loader'>
+            <PacmanLoader color='#7BFDF8' />
+          </div>
+        ) : (
           <div className='carousel'>
             <Carousel
               navButtonsAlwaysVisible={true}
@@ -66,12 +67,22 @@ function Home() {
                   color: '#7BFDF8',
                 },
               }}
+              indicatorContainerProps={{
+                style: {
+                  marginTop: '20px',
+                },
+              }}
+              indicatorIconButtonProps={{
+                style: {
+                  color: '#7BFDF8',
+                },
+              }}
             >
               {servers.map((server) => (
                 <div key={server.id} className='carousel-servers'>
-                  <Link to={`/server/${id}`}>
-                    <div>
-                      <p className='carousel-server-name'>{server.name}</p>
+                  <Link to={`/server/${server.id}`}>
+                    <div className='carousel-server-name'>
+                      <p>{server.name}</p>
                       {/* <p className='carousel-title'>{post.title}</p> */}
                     </div>
                   </Link>
@@ -79,8 +90,8 @@ function Home() {
               ))}
             </Carousel>
           </div>
-      )}
-        </div>
+        )}
+      </div>
     </div>
   )
 }
