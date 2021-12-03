@@ -97,7 +97,7 @@
   transition: 350ms;
 }
 
-.carousel a:hover, .carousel p:hover {
+.carousel-servers a:hover, .carousel-servers p:hover {
   color: #F3BAFE;
   cursor: pointer;
 }
