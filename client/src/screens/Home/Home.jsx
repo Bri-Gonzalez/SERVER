@@ -44,6 +44,7 @@ function Home() {
           </div>
         ) : (
           <div className='carousel'>
+            <p className='carousel-title'>Top Gaming Servers</p>
             <Carousel
               navButtonsAlwaysVisible={true}
               stopAutoPlayOnHover={true}
@@ -52,6 +53,7 @@ function Home() {
                   backgroundColor: 'transparent',
                   border: '2px solid #7BFDF8',
                   color: '#7BFDF8',
+                  display: 'none',
                 },
               }}
               indicatorContainerProps={{

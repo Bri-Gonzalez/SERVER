@@ -71,8 +71,16 @@
 .carousel {
   border: 2px solid #7BFDF8;
   border-radius: 10px;
-  padding: 40px 20px;
+  padding: 30px 20px;
   width: 50%;
+}
+
+.carousel-title {
+  color: #7BFDF8;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: clamp(21px, 2.7vw, 27px);
+  font-weight: 500;
+  margin: 0 0 20px 0;
 }
 
 .carousel-servers {
@@ -80,10 +88,10 @@
   width: 70%;
 }
 
-.carousel a, .carousel p {
+.carousel-servers a, .carousel-servers p {
   color: #7BFDF8;
   font-family: 'Fira Sans', sans-serif;
-  font-size: clamp(18px, 2.7vw, 27px);
+  font-size: clamp(18px, 2vw, 22px);
   margin: 0 auto;
   text-decoration: none;
   transition: 350ms;
@@ -151,10 +159,3 @@
     width: 80%;
   }
 } 
-
-@media screen and (max-width: 400px) {
-  .carousel {
-    border: unset;
-    width: 100%;
-  }
-}
