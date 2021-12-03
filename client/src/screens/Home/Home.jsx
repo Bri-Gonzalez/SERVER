@@ -1,22 +1,21 @@
 import './Home.css'
 import { useState, useEffect } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Carousel from 'react-material-ui-carousel'
 import PacmanLoader from 'react-spinners/PacmanLoader'
-import { getAllPosts } from '../../services/posts'
+import { getAllServers } from '../../services/servers'
 
 function Home() {
-  const [posts, setPosts] = useState([])
+  const [servers, setServers] = useState([])
   const [isLoaded, setLoaded] = useState(false)
-  const { id } = useParams()
 
   useEffect(() => {
-    const fetchPosts = async () => {
-      const postList = await getAllPosts()
-      setPosts(postList)
+    const fetchServers = async () => {
+      const serverList = await getAllServers()
+      setServers(serverList)
       setLoaded(true)
     }
-    fetchPosts()
+    fetchServers()
   }, [])
 
   return (
@@ -38,13 +37,14 @@ function Home() {
           </Link>
         </div>
       </div>
-        <div className='carousel-container'>
-      {!isLoaded ? (
-        <div className='loader'>
-          <PacmanLoader color='#7BFDF8' />
-        </div>
-      ) : (
+      <div className='carousel-container'>
+        {!isLoaded ? (
+          <div className='loader'>
+            <PacmanLoader color='#7BFDF8' />
+          </div>
+        ) : (
           <div className='carousel'>
+            <p className='carousel-title'>Top Gaming Servers</p>
             <Carousel
               navButtonsAlwaysVisible={true}
               stopAutoPlayOnHover={true}
@@ -53,23 +53,33 @@ function Home() {
                   backgroundColor: 'transparent',
                   border: '2px solid #7BFDF8',
                   color: '#7BFDF8',
+                  display: 'none',
+                },
+              }}
+              indicatorContainerProps={{
+                style: {
+                  marginTop: '20px',
+                },
+              }}
+              indicatorIconButtonProps={{
+                style: {
+                  color: '#7BFDF8',
                 },
               }}
             >
-              {posts.map((post) => (
-                <div key={post.id} className='carousel-posts'>
-                  <Link to={`/server/${id}/posts/${post.id}`}>
-                    <div>
-                      <p className='carousel-username'>{post.user.username}</p>
-                      <p className='carousel-title'>{post.title}</p>
+              {servers.map((server) => (
+                <div key={server.id} className='carousel-servers'>
+                  <Link to={`/server/${server.id}`}>
+                    <div className='carousel-server-name'>
+                      <p>{server.name}</p>
                     </div>
                   </Link>
                 </div>
               ))}
             </Carousel>
           </div>
-      )}
-        </div>
+        )}
+      </div>
     </div>
   )
 }
