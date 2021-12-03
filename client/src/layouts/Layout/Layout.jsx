@@ -75,7 +75,9 @@ function Layout(props) {
             flexShrink: 0,
             '& .MuiDrawer-paper': {
               width: drawerWidth,
-              background: '#2a374af3'
+              background: '#2a374af3',
+              backdropFilter: 'blur(5px)',
+              border: 'none'
             },
           }}
           variant='persistent'
