@@ -22,7 +22,6 @@ import EditComment from './screens/EditComment/EditComment'
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null)
-  // const [isNotValid, setIsNotValid] = useState(false)›
   const history = useHistory()
 
   useEffect(() => {
@@ -39,7 +38,6 @@ function App() {
       setCurrentUser(userData)
       history.push('/')
     } 
-    // setIsNotValid(true)
   }
 
   const handleJoin = async (formData) => {
