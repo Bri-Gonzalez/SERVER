@@ -1,4 +1,4 @@
-# SERVR <!-- omit in toc -->
+# SERVER <!-- omit in toc -->
 
 - [Overview](#overview)
 - [MVP](#mvp)
@@ -17,7 +17,7 @@
 
 ## Overview
 
-_**SERVR** is a collection of forums where gamers can converse, share, and collaborate together through different video game related servers._
+_**SERVER** is a collection of forums where gamers can converse, share, and collaborate together through different video game related servers._
 
 [Deployed Site](https://find-your-server.netlify.app/)
 
@@ -25,7 +25,7 @@ _**SERVR** is a collection of forums where gamers can converse, share, and colla
 
 ## MVP
 
-_The **SERVR** MVP will allow a user to explore a variety of different video game servers. Once a user signs up and logs in, they will be allowed to create new servers, add posts, and leave comments._
+_The **SERVER** MVP will allow a user to explore a variety of different video game servers. Once a user signs up and logs in, they will be allowed to create new servers, add posts, and leave comments._
 
 <br>
 
