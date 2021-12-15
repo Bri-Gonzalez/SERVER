@@ -47,7 +47,6 @@ _The **SERVER** MVP will allow a user to explore a variety of different video ga
 | React Router     | _A library used for routing in React_ |
 | React Router DOM | _DOM bindings for React Router_ |
 | Axios            | _Promise based HTTP client used to communicate with the backend_ |
-| Node.js          | _Javascript runtime environment for executing JavaScript code server-side_ |
 | Ruby on Rails    | _Server-side MVC framework used for the back end_ |
 | JWT              | _Used to create access tokens for an application_ |
 | bcrypt           | _Password hashing function_ |
